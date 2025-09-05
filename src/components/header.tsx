@@ -16,12 +16,12 @@ const HeaderPage = () => {
                 {/* <Link href={"/"}><h1 className='font-bold text-lg'>Utsav G.</h1></Link> */}
             </div>
             <div className='flex items-center gap-10'>
-                <Link href={"/"}><h5 className='text-sm font-light hover:text-muted-foreground'>ABOUT ME</h5></Link>
-                <Link href={"/"}><h5 className='text-sm font-light hover:text-muted-foreground'>PROJECTS</h5></Link>
-                <Link href={"/#skills"}><h5 className='text-sm font-light hover:text-muted-foreground'>SKILLS</h5></Link>
+                <Link href={"/"}><h5 className='text-sm font-light text-muted-foreground'>ABOUT ME</h5></Link>
+                <Link href={"/#projects"}><h5 className='text-sm font-light text-muted-foreground'>PROJECTS</h5></Link>
+                <Link href={"/#skills"}><h5 className='text-sm font-light text-muted-foreground'>SKILLS</h5></Link>
             </div>
             <div>
-                <Button className='p-3 rounded-md bg-accent tracking-wide'>Contact</Button>
+                <Button className='p-3 rounded-md bg-primary tracking-wide'>Contact</Button>
             </div>
         </div>
     )
