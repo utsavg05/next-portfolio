@@ -7,7 +7,7 @@ export default function ContactPage() {
     return (
         <section
             id="contact"
-            className="bg-background flex flex-col items-center justify-center py-16 px-4"
+            className="bg-background h-screen flex flex-col items-center justify-center py-16 px-4"
         >
             <div className="max-w-xl text-center space-y-8">
                 <h2 className="text-5xl sm:text-7xl font-serif text-primary">Get in Touch</h2>
@@ -29,7 +29,7 @@ export default function ContactPage() {
                         >
                             {/* X logo (uses currentColor so it follows text color) */}
                         <div className="flex items-center gap-2">
-                            <span className="font-serif tracking-wide">Connect on </span>
+                            <span className="font-serif text-foreground tracking-wide">Connect on </span>
                             <Image width={20} height={20} src={'/image.png'} alt={"x logo"} />
                         </div>
                         </a>
