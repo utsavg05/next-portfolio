@@ -141,7 +141,7 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="w-full py-16 bg-background text-foreground">
       <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-center text-5xl sm:text-8xl font-serif mb-10 text-primary">
+        <h2 className="text-center text-5xl sm:text-7xl font-serif mb-10 text-primary">
           Skills
         </h2>
 
@@ -197,12 +197,12 @@ export default function SkillsSection() {
 
         /* LTR: move from -50% -> 0 so it appears to scroll left→right visually */
         .marquee--ltr {
-          animation: marquee-ltr 15s linear infinite;
+          animation: marquee-ltr 20s linear infinite;
         }
 
         /* RTL: move from 0 -> -50% (opposite direction) */
         .marquee--rtl {
-          animation: marquee-rtl 10s linear infinite;
+          animation: marquee-rtl 20s linear infinite;
         }
 
         /* pause when user hovers any item inside the marquee (optional nicety) */

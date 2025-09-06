@@ -38,7 +38,7 @@ const projects = [
     description: "All-in-one learning assistant powered by AI.",
     image: "/smritiAi.jpg",
     link: "https://www.smriti.live/",
-    tech: ["Next.js", "TypeScript", "Gemini API"],
+    tech: ["Next.js", "TypeScript", "Gemini API", "Supabase"],
   },
   {
     title: "JobSeek",
@@ -66,11 +66,11 @@ export default function ProjectPage() {
         <h2 className="text-5xl sm:text-8xl text-center font-serif text-primary mb-4">
           Projects
         </h2>
-        <p className="text-muted-foreground text-center text-lg max-w-2xl mx-auto mb-12">
+        <p className="text-muted-foreground text-center text-lg max-w-2xl mx-auto mb-7">
           A selection of my featured work.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-0.5">
           {projects.map((project, index) => (
             <CardContainer key={index} className="inter-var">
               <CardBody className="relative group/card bg-card border border-border rounded-xl p-6 hover:shadow-2xl hover:shadow-primary/20 transition-shadow">

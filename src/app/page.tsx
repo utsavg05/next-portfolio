@@ -1,9 +1,8 @@
+import ContactPage from "@/components/ContactPage";
 import ExperiencePage from "@/components/Experience";
 import HeroSection from "@/components/hero";
 import ProjetPage from "@/components/projects";
 import SkillsSection from "@/components/SkillSection";
-import { Button } from "@/components/ui/button";
-import { Card } from "@/components/ui/card";
 
 export default function Home() {
   return (
@@ -12,6 +11,7 @@ export default function Home() {
       <ExperiencePage />
       <ProjetPage />
       <SkillsSection />
+      <ContactPage />
     </div>
   );
 }
