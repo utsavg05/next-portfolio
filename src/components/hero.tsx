@@ -6,7 +6,7 @@ const HeroSection = () => {
   return (
     <div className='w-full max-w-5xl mx-auto mt-4 px-15 py-14 flex flex-col gap-4'>
         <div>
-            <h2 className='font-serif text-xl text-accent tracking-widest'>Hi👋, my name is</h2>
+            <h2 className='font-serif text-xl text-accent tracking-widest'>Hi<span className='animate-bounce'>👋</span>, my name is</h2>
         </div>
         <div>
             <h1 className='text-primary text-8xl font-bold font-serif'>Utsav Gupta.</h1>

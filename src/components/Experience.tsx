@@ -4,7 +4,7 @@ import { GraduationCap, Building2, Calendar, Briefcase } from "lucide-react";
 
 export default function ExperiencePage() {
   return (
-    <section className="max-w-5xl mx-auto px-6 py-16">
+    <section className="max-w-7xl w-full rounded mx-auto px-6 py-16 bg-card">
       {/* Education */}
       <h2 className="text-3xl font-bold text-primary mb-6">Education</h2>
       <div className="space-y-3 bg-card/40 p-6 rounded-2xl border border-border">
