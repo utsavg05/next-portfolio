@@ -1,4 +1,3 @@
-// app/experience/page.tsx
 "use client";
 import { GraduationCap, Building2, Calendar, Briefcase } from "lucide-react";
 

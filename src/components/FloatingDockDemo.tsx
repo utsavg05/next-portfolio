@@ -32,8 +32,9 @@ export function FloatingDockDemo() {
             icon: (
                 <IconFileDownload className="h-full w-full text-foreground hover:text-primary transition-colors" />
             ),
-            href: "/resume.pdf", // place your resume in /public folder
+            href: "/Resume_Copy_(7).pdf", // place your resume in /public folder
             download: true,
+            target: "_blank"
         },
         {
             title: "X",

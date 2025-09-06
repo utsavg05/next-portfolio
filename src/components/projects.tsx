@@ -1,19 +1,3 @@
-// import React from 'react'
-
-// const ProjetPage = () => {
-//   return (
-//     <div className='w-full min-h-screen bg-secondary-foreground max-w-9xl mx-auto flex flex-col gap-4'>
-//         <div className=' w-full max-w-8xl mx-auto rounded h-full'>
-//             <h1 className='text-center font-serif text-8xl text-primary'>Projects</h1>
-
-//         </div>
-//     </div>
-//   )
-// }
-
-// export default ProjetPage
-
-
 "use client";
 
 import * as React from "react";
