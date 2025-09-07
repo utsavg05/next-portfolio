@@ -36,53 +36,34 @@ const FloatingDockMobile = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
-  const [open, setOpen] = useState(false);
   return (
-    <div className={cn("relative block md:hidden", className)}>
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId="nav"
-            className="absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2"
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <a
-                  href={item.href}
-                  key={item.title}
-                  className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
-                >
-                  <div className="h-4 w-4">{item.icon}</div>
-                </a>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className="flex h-10 w-10 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-800"
+    <div className={cn("relative block md:hidden w-full", className)}>
+      <motion.div
+        layoutId="nav"
+        className="fixed inset-x-0 bottom-0 z-50 flex items-center justify-around gap-2 rounded-t-2xl 
+                   bg-white/80 dark:bg-black/60 backdrop-blur-lg border-t border-white/20 px-3 py-2 shadow-lg"
       >
-        <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
-      </button>
+        {items.map((item, idx) => (
+          <motion.div
+            key={item.title}
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: idx * 0.05 }}
+          >
+            <a
+              href={item.href}
+              className="flex h-12 w-12 items-center justify-center rounded-full bg-gray-50 dark:bg-neutral-900"
+            >
+              <div className="h-5 w-5">{item.icon}</div>
+            </a>
+          </motion.div>
+        ))}
+      </motion.div>
     </div>
   );
 };
+
+
 
 const FloatingDockDesktop = ({
   items,

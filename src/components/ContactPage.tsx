@@ -29,7 +29,7 @@ export default function ContactPage() {
                         >
                             {/* X logo (uses currentColor so it follows text color) */}
                         <div className="flex items-center gap-2">
-                            <span className="font-serif text-foreground tracking-wide">Connect on </span>
+                            <span className="font-serif text-background dark:text-foreground tracking-wide">Connect on </span>
                             <Image width={20} height={20} src={'/image.png'} alt={"x logo"} />
                         </div>
                         </a>
