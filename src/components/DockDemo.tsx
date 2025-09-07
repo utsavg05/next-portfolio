@@ -321,78 +321,153 @@ const DATA = {
 
 export function DockDemo() {
   return (
-    <div className="fixed bottom-4 md:bottom-6 left-1/2 -translate-x-1/2 z-50 w-full px-2">
-      <TooltipProvider>
-        <Dock
-          direction="middle"
-          className={cn(
-            "rounded-4xl relative mx-auto flex items-center px-3",
-            "bg-background dark:bg-background",
-            "[box-shadow:0_0_0_1px_rgba(0,0,0,.05),0_2px_4px_rgba(0,0,0,.08),0_12px_24px_rgba(0,0,0,.08)]",
-            "dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
-          )}
-        >
-          {DATA.navbar.map((item) => (
-            <DockIcon key={item.label}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={item.href}
-                    aria-label={item.label}
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full hover:bg-muted/40 transition"
-                    )}
-                  >
-                    <item.icon className="size-5 text-foreground" strokeWidth={2} />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent side="top">
-                  <p>{item.label}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
+    // <div className="fixed bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 z-50 w-fit py-0 px-2">
+    //   <TooltipProvider>
+    //     <Dock
+    //       direction="middle"
+    //       className={cn(
+    //         "rounded-4xl relative mx-auto flex items-center px-3",
+    //         "bg-background dark:bg-background",
+    //         "[box-shadow:0_0_0_1px_rgba(0,0,0,.05),0_2px_4px_rgba(0,0,0,.08),0_12px_24px_rgba(0,0,0,.08)]",
+    //         "dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+    //       )}
+    //     >
+    //       {DATA.navbar.map((item) => (
+    //         <DockIcon key={item.label}>
+    //           <Tooltip>
+    //             <TooltipTrigger asChild>
+    //               <Link
+    //                 href={item.href}
+    //                 aria-label={item.label}
+    //                 className={cn(
+    //                   buttonVariants({ variant: "ghost", size: "icon" }),
+    //                   "size-12 rounded-full hover:bg-muted/40 transition"
+    //                 )}
+    //               >
+    //                 <item.icon className="size-5 text-foreground" strokeWidth={2} />
+    //               </Link>
+    //             </TooltipTrigger>
+    //             <TooltipContent side="top">
+    //               <p>{item.label}</p>
+    //             </TooltipContent>
+    //           </Tooltip>
+    //         </DockIcon>
+    //       ))}
 
-          <Separator orientation="vertical" className="h-full" />
+    //       <Separator orientation="vertical" className="h-full" />
 
-          {DATA.social.map((social) => (
-            <DockIcon key={social.name}>
-              <Tooltip>
-                <TooltipTrigger asChild>
-                  <Link
-                    href={social.url}
-                    aria-label={social.name}
-                    target="_blank"
-                    className={cn(
-                      buttonVariants({ variant: "ghost", size: "icon" }),
-                      "size-12 rounded-full hover:bg-muted/40 transition"
-                    )}
-                  >
-                    <social.icon className="size-5 text-foreground" strokeWidth={2} />
-                  </Link>
-                </TooltipTrigger>
-                <TooltipContent side="top">
-                  <p>{social.name}</p>
-                </TooltipContent>
-              </Tooltip>
-            </DockIcon>
-          ))}
+    //       {DATA.social.map((social) => (
+    //         <DockIcon key={social.name}>
+    //           <Tooltip>
+    //             <TooltipTrigger asChild>
+    //               <Link
+    //                 href={social.url}
+    //                 aria-label={social.name}
+    //                 target="_blank"
+    //                 className={cn(
+    //                   buttonVariants({ variant: "ghost", size: "icon" }),
+    //                   "size-12 rounded-full hover:bg-muted/40 transition"
+    //                 )}
+    //               >
+    //                 <social.icon className="size-5 text-foreground" strokeWidth={2} />
+    //               </Link>
+    //             </TooltipTrigger>
+    //             <TooltipContent side="top">
+    //               <p>{social.name}</p>
+    //             </TooltipContent>
+    //           </Tooltip>
+    //         </DockIcon>
+    //       ))}
 
-          <Separator orientation="vertical" className="h-full" />
+    //       <Separator orientation="vertical" className="h-full" />
 
-          <DockIcon>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <ModeToggle />
-              </TooltipTrigger>
-              <TooltipContent side="top">
-                <p>Theme</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
-        </Dock>
-      </TooltipProvider>
-    </div>
+    //       <DockIcon>
+    //         <Tooltip>
+    //           <TooltipTrigger asChild>
+    //             <ModeToggle />
+    //           </TooltipTrigger>
+    //           <TooltipContent side="top">
+    //             <p>Theme</p>
+    //           </TooltipContent>
+    //         </Tooltip>
+    //       </DockIcon>
+    //     </Dock>
+    //   </TooltipProvider>
+    // </div>
+
+    <div className="fixed bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 z-50 inline-flex">
+  <TooltipProvider>
+    <Dock
+      direction="middle"
+      className={cn(
+        "rounded-4xl relative flex items-center px-3",
+        "bg-background dark:bg-background",
+        "[box-shadow:0_0_0_1px_rgba(0,0,0,.05),0_2px_4px_rgba(0,0,0,.08),0_12px_24px_rgba(0,0,0,.08)]",
+        "dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset]"
+      )}
+    >
+      {DATA.navbar.map((item) => (
+        <DockIcon key={item.label}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                href={item.href}
+                aria-label={item.label}
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12 rounded-full hover:bg-muted/40 transition"
+                )}
+              >
+                <item.icon className="size-5 text-foreground" strokeWidth={2} />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent side="top">
+              <p>{item.label}</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+      ))}
+
+      <Separator orientation="vertical" className="h-full" />
+
+      {DATA.social.map((social) => (
+        <DockIcon key={social.name}>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <Link
+                href={social.url}
+                aria-label={social.name}
+                target="_blank"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12 rounded-full hover:bg-muted/40 transition"
+                )}
+              >
+                <social.icon className="size-5 text-foreground" strokeWidth={2} />
+              </Link>
+            </TooltipTrigger>
+            <TooltipContent side="top">
+              <p>{social.name}</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+      ))}
+
+      <Separator orientation="vertical" className="h-full" />
+
+      <DockIcon>
+        <Tooltip>
+          <TooltipTrigger asChild>
+            <ModeToggle />
+          </TooltipTrigger>
+          <TooltipContent side="top">
+            <p>Theme</p>
+          </TooltipContent>
+        </Tooltip>
+      </DockIcon>
+    </Dock>
+  </TooltipProvider>
+</div>
+
   );
 }

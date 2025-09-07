@@ -110,7 +110,7 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <section className="w-full min-h-screen md:max-w-5xl mx-auto flex flex-col justify-center px-6 md:px-15 lg:px-20 py-8 md:py-16">
+    <section className="w-full min-h-screen md:max-w-5xl mx-auto flex flex-col justify-center px-6 md:px-15 lg:px-20 py-4 md:py-16">
       {/* Intro */}
       <p className="font-mono text-md md:text-lg text-chart-1 tracking-widest mb-4">
         Hi<span className="ml-1">👋</span>, my name is

@@ -65,9 +65,10 @@ export default function SkillsSection() {
   const firstDup = [...firstHalf, ...firstHalf];
   const secondDup = [...secondHalf, ...secondHalf];
 
+
   return (
-    <section id="skills" className="w-full py-16 bg-background text-foreground">
-      <div className="max-w-7xl mx-auto px-4">
+    <section id="skills" className="w-full py-16 bg-background text-foreground mb-20">
+      <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-5xl sm:text-7xl font-serif mb-10 text-primary">
           Skills
         </h2>
@@ -111,6 +112,8 @@ export default function SkillsSection() {
             </div>
           </div>
         </div>
+
+        
       </div>
 
       {/* Styles — uses your theme tokens (bg-card, text-foreground, text-primary, border-border, etc.). */}
@@ -124,7 +127,7 @@ export default function SkillsSection() {
 
         /* LTR: move from -50% -> 0 so it appears to scroll left→right visually */
         .marquee--ltr {
-          animation: marquee-ltr 20s linear infinite;
+          animation: marquee-ltr 24s linear infinite;
         }
 
         /* RTL: move from 0 -> -50% (opposite direction) */
