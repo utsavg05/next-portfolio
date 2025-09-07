@@ -135,13 +135,14 @@ export function FloatingDockDemo() {
   ];
 
   return (
-    <div className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50 w-full px-4 sm:px-6 md:px-0">
-      <div className="max-w-fit mx-auto backdrop-blur-lg bg-white/10 dark:bg-black/20 border border-white/20 dark:border-white/10 rounded-2xl px-3 shadow-lg">
-        <FloatingDock
-        //   mobileClassName="translate-y-20"
-          items={links}
-        />
-      </div>
+    <div className="fixed bottom-8 right-2 md:bottom-6 md:left-1/2 md:-translate-x-1/2 z-50 w-fit px-4 sm:px-6 md:px-0">
+      <FloatingDock
+        mobileClassName=""
+        items={links}
+      />
+      {/* <div className="max-w-fit mx-auto backdrop-blur-lg bg-white/10 dark:bg-black/20 border border-white/20 dark:border-white/10 rounded-2xl px-3 shadow-lg">
+        
+      </div> */}
     </div>
   );
 }
