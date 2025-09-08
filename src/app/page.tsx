@@ -7,7 +7,7 @@ import SkillsSection from "@/components/SkillSection";
 
 export default function Home() {
   return (
-    <div id="/" className="flex flex-col items-center ">
+    <div id="/" className="flex flex-col items-center">
       <HeroSection />
       <ExperiencePage />
       <ProjetPage />

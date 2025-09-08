@@ -313,7 +313,7 @@ const DATA = {
   ],
   social: [
     { name: "GitHub", url: "https://github.com/utsavg05", icon: FaGithub },
-    { name: "LinkedIn", url: "https://linkedin.com/in/utsav-gupta-3443a0324e", icon: FaLinkedin },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/utsav-gupta-3443a0324", icon: FaLinkedin },
     { name: "X", url: "https://x.com/0xdevug", icon: FaXTwitter }, // Lucide uses Twitter instead of X
     { name: "Email", url: "mailto:utsav.gp1204@gmail.com", icon: Mail },
   ],
@@ -395,7 +395,7 @@ export function DockDemo() {
     //   </TooltipProvider>
     // </div>
 
-    <div className="fixed bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 z-50 inline-flex">
+    <div className="fixed bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 z-50 inline-flex px-2">
   <TooltipProvider>
     <Dock
       direction="middle"

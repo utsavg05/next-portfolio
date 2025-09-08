@@ -112,19 +112,19 @@ const HeroSection = () => {
   return (
     <section className="w-full min-h-screen md:max-w-5xl mx-auto flex flex-col justify-center px-6 md:px-15 lg:px-20 py-4 md:py-16">
       {/* Intro */}
-      <p className="font-mono text-md md:text-lg text-chart-1 tracking-widest mb-4">
+      <p className="font-mono text-md md:text-lg text-chart-1 tracking-widest mb-6">
         Hi<span className="ml-1">👋</span>, my name is
       </p>
 
       {/* Name + Image */}
-      <div className="flex flex-col md:flex-row items-center md:items-center gap-6 md:gap-1">
+      <div className="flex flex-col md:flex-row items-center  md:items-center gap-6 md:gap-1">
         <h1 className="text-primary text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold font-serif leading-tight md:leading-[1.1] tracking-tight w-full md:w-2/3 text-center md:text-left">
           Utsav Gupta
         </h1>
         <div className="w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-64 overflow-hidden border-2 border-muted-foreground 
           rounded-full md:rounded-lg shadow-lg md:shadow-[0_0_35px_-5px_rgba(59,130,246,0.7)]">
           <Image
-            src={"/profile.jpg"}
+            src={"/profile3.jpg"}
             width={250}
             height={300}
             alt="profile_pic"
@@ -140,8 +140,8 @@ const HeroSection = () => {
         </h2>
         <p className="text-chart-1 text-base sm:text-lg md:text-xl leading-relaxed md:leading-normal tracking-normal md:tracking-wide font-mono text-center md:text-left">
           I’m a{" "}
-          <span className="text-foreground md:bg-chart-3 rounded-sm px-1">
-            FullStack Developer
+          <span className="text-foreground bg-chart-3 rounded-sm px-1.5 py-0.5">
+            Full Stack Developer
           </span>{" "}
           who enjoys crafting interactive experiences for the web. Whether it’s
           designing clean interfaces or solving complex problems with code, I
@@ -152,7 +152,7 @@ const HeroSection = () => {
       {/* CTA */}
       <div className="flex items-center justify-center md:justify-start mt-5">
         <Link
-          href={"https://retro-design-plum.vercel.app"}
+          href={"https://drive.google.com/file/d/15-LFkJ9zmytuMwrRVPFOAdjBWmWyENQQ/view?usp=drivesdk"}
           className="w-fit font-mono text-primary text-lg tracking-wide border-b-2 border-b-foreground hover:border-primary transition duration-200"
         >
           View Resume
