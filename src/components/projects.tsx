@@ -39,11 +39,11 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "Portfolio Website",
-    description: "Retro-style UI with modern implementation.",
-    image: "/retro.jpg",
-    link: "https://retro-design-plum.vercel.app/",
-    tech: ["HTML", "CSS", "JavaScript"],
+    title: "Utsav.dev",
+    description: "Personal Portfolio Website",
+    image: "/portfolio_landing.jpg",
+    link: "https://utsavxyz.vercel.app/",
+    tech: ["Next.Js", "Typescript", "ShadcnUI"],
   },
 ];
 
