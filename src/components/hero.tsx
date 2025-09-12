@@ -107,6 +107,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { MdOutlineFileDownload } from "react-icons/md";
 
 const HeroSection = () => {
   return (
@@ -150,13 +151,16 @@ const HeroSection = () => {
       </div>
 
       {/* CTA */}
-      <div className="flex items-center justify-center md:justify-start mt-5">
+      <div className="flex items-center justify-center md:justify-start mt-7">
+        <div className="flex items-center gap-1 bg-primary text-background px-3 py-1 rounded-lg">
         <Link
           href={"https://drive.google.com/file/d/15-LFkJ9zmytuMwrRVPFOAdjBWmWyENQQ/view?usp=drivesdk"}
-          className="w-fit font-mono text-primary text-lg tracking-wide border-b-2 border-b-foreground hover:border-primary transition duration-200"
+          className="flex items-center gap-1 bg-primary text-background text-lg px-2 py-0.5 rounded-lg w-fit font-mono hover:border-primary transition duration-200"
         >
-          View Resume
+          <MdOutlineFileDownload size="22px" />
+           Resume
         </Link>
+        </div>
       </div>
     </section>
   );
