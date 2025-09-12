@@ -10,8 +10,8 @@ export default function Home() {
     <div id="/" className="flex flex-col items-center">
       <HeroSection />
       <ExperiencePage />
-      <ProjetPage />
       <SkillsSection />
+      <ProjetPage />
       <ContactPage />
     </div>
   );
