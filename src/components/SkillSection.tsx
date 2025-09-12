@@ -67,7 +67,7 @@ export default function SkillsSection() {
 
 
   return (
-    <section id="skills" className="w-full py-16 bg-background text-foreground mb-20">
+    <section id="skills" className="w-full py-16 bg-background text-foreground mb-6">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-center text-5xl sm:text-7xl font-serif mb-10 text-primary">
           Skills
