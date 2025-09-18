@@ -154,7 +154,7 @@ const HeroSection = () => {
       <div className="flex items-center justify-center md:justify-start mt-7">
         <div className="flex items-center gap-1 bg-primary text-background px-3 py-1 rounded-lg">
         <Link
-          href={"https://drive.google.com/file/d/15-LFkJ9zmytuMwrRVPFOAdjBWmWyENQQ/view?usp=drivesdk"}
+          href={"https://drive.google.com/file/d/1Hp3SinrFrvOXqI-umzciRPoPVbe2I_mC/view?usp=sharing"}
           className="flex items-center gap-1 bg-primary text-background text-lg px-2 py-0.5 rounded-lg w-fit font-mono hover:border-primary transition duration-200"
         >
           <MdOutlineFileDownload size="22px" />
