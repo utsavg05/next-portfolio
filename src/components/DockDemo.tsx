@@ -391,7 +391,7 @@ export function DockDemo() {
     //   </TooltipProvider>
     // </div>
 
-    <div className="fixed bottom-4 md:bottom-5 left-1/2 -translate-x-1/2 z-50 inline-flex px-2">
+    <div className="fixed bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 z-50 inline-flex px-2">
   <TooltipProvider>
     <Dock
       direction="middle"
