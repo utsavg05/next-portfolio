@@ -391,7 +391,7 @@ export function DockDemo() {
     //   </TooltipProvider>
     // </div>
 
-    <div className="fixed bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 z-50 inline-flex px-2">
+    <div className="md:hidden fixed bottom-2 md:bottom-5 left-1/2 -translate-x-1/2 z-50 inline-flex px-2">
   <TooltipProvider>
     <Dock
       direction="middle"
@@ -424,7 +424,7 @@ export function DockDemo() {
         </DockIcon>
       ))}
 
-      <Separator orientation="vertical" className="h-full" />
+      {/* <Separator orientation="vertical" className="h-full" /> */}
 
       {DATA.social.map((social) => (
         <DockIcon key={social.name}>
@@ -449,18 +449,9 @@ export function DockDemo() {
         </DockIcon>
       ))}
 
-      <Separator orientation="vertical" className="h-full" />
+      {/* <Separator orientation="vertical" className="h-full" /> */}
 
-      <DockIcon>
-        <Tooltip>
-          <TooltipTrigger asChild>
-            <ModeToggle />
-          </TooltipTrigger>
-          <TooltipContent side="top">
-            <p>Theme</p>
-          </TooltipContent>
-        </Tooltip>
-      </DockIcon>
+      
     </Dock>
   </TooltipProvider>
 </div>
