@@ -109,22 +109,6 @@ export function FloatingDockDemo() {
       href: "#projects",
     },
     {
-      title: "Email",
-      icon: (
-        <Mail className="h-full w-full text-foreground hover:text-primary transition-colors" />
-      ),
-      href: "mailto:utsav.gp1204@gmail.com", // Place your resume inside /public
-      download: true,
-      target: "_blank",
-    },
-    {
-      title: "X",
-      icon: (
-        <FaXTwitter className="h-full w-full text-foreground hover:text-primary transition-colors" />
-      ),
-      href: "https://x.com/0xdevug",
-    },
-    {
       title: "GitHub",
       icon: (
         <FaGithub className="h-full w-full text-foreground hover:text-primary transition-colors" />
@@ -137,6 +121,22 @@ export function FloatingDockDemo() {
         <FaLinkedin className="h-full w-full text-foreground hover:text-primary transition-colors" />
       ),
       href: "https://www.linkedin.com/in/utsav-gupta-3443a0324e",
+    },
+    {
+      title: "X",
+      icon: (
+        <FaXTwitter className="h-full w-full text-foreground hover:text-primary transition-colors" />
+      ),
+      href: "https://x.com/0xdevug",
+    },
+    {
+      title: "Email",
+      icon: (
+        <Mail className="h-full w-full text-foreground hover:text-primary transition-colors" />
+      ),
+      href: "mailto:utsav.gp1204@gmail.com", // Place your resume inside /public
+      download: true,
+      target: "_blank",
     },
   ];
 
