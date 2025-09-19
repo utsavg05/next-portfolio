@@ -21,7 +21,7 @@ export default function ContactPage() {
                     {/* wrapper provides the gradient hover border, inner <a> is the real link */}
                     <HoverBorderGradient containerClassName="rounded-full">
                         <a
-                            href="https://x.com/0xdevug"          // ← replace with your handle
+                            href="https://x.com/0xdevug"   
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="Connect on X"
