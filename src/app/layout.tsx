@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { DockDemo } from "@/components/DockDemo";
 import { FloatingDockDemo } from "@/components/FloatingDockDemo";
+import { Analytics } from '@vercel/analytics/next';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +33,7 @@ export default function RootLayout({
         <FloatingDockDemo />
         <DockDemo />
         {children}
+        <Analytics />
       </body>
     </html>
   );
