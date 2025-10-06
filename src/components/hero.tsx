@@ -113,7 +113,7 @@ const HeroSection = () => {
   return (
     <section className="w-full min-h-screen md:max-w-5xl mx-auto flex flex-col justify-center px-6 md:px-15 lg:px-20 py-4 md:py-16">
       {/* Intro */}
-      <p className="font-mono text-md md:text-lg text-chart-1 tracking-widest mb-6">
+      <p className="font-mono text-sky-900 text-md md:text-lg dark:text-chart-1 tracking-widest mb-6">
         Hi<span className="ml-1">👋</span>, my name is
       </p>
 
@@ -139,9 +139,9 @@ const HeroSection = () => {
         <h2 className="text-muted-foreground text-3xl sm:text-4xl md:text-7xl lg:text-7xl font-serif leading-snug md:leading-[1.15] text-center md:text-left">
           I build things for the web.
         </h2>
-        <p className="text-chart-1 text-base sm:text-lg md:text-xl leading-relaxed md:leading-normal tracking-normal md:tracking-wide font-mono text-center md:text-left">
+        <p className="dark:text-chart-1 text-sky-900 dark:text-base sm:text-lg md:text-xl leading-relaxed md:leading-normal tracking-normal md:tracking-wide font-mono text-center md:text-left">
           I’m a{" "}
-          <span className="text-foreground bg-chart-3 rounded-sm px-1.5 py-0.5">
+          <span className="bg-sky-100 text-sky-800 dark:text-foreground dark:bg-chart-3 rounded-sm px-1.5 py-0.5">
             Full Stack Developer
           </span>{" "}
           who enjoys crafting interactive experiences for the web. Whether it’s

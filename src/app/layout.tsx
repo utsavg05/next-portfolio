@@ -4,6 +4,7 @@ import "./globals.css";
 import { DockDemo } from "@/components/DockDemo";
 import { FloatingDockDemo } from "@/components/FloatingDockDemo";
 import { Analytics } from '@vercel/analytics/next';
+import { ThemeProvider } from "next-themes";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -30,10 +31,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <FloatingDockDemo />
-        <DockDemo />
-        {children}
-        <Analytics />
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <FloatingDockDemo />
+          <DockDemo />
+          {children}
+          <Analytics />
+        </ThemeProvider>
       </body>
     </html>
   );

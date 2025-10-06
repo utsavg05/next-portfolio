@@ -449,7 +449,17 @@ export function DockDemo() {
         </DockIcon>
       ))}
 
-      {/* <Separator orientation="vertical" className="h-full" /> */}
+      <Separator orientation="vertical" className="h-full" />
+      <DockIcon>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <ModeToggle />
+               </TooltipTrigger>
+               <TooltipContent side="top">
+                 <p>Theme</p>
+               </TooltipContent>
+             </Tooltip>
+           </DockIcon>
 
       
     </Dock>
