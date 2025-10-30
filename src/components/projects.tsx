@@ -14,7 +14,8 @@ const projects = [
     title: "Zync",
     description: "Real-time chat app with instant messaging.",
     image: "/zync_ss.jpg",
-    link: "https://zync-1hnm.onrender.com/",
+    // link: "https://zync-1hnm.onrender.com/",
+    link: "https://zync-three.vercel.app",
     tech: ["MongoDB", "Express", "React", "Node.js"],
   },
   {
