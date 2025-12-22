@@ -208,13 +208,13 @@ const HeroSection = () => {
           </h1>
 
           {/* SUBTEXT — fills empty space */}
-          <p className="mt-4 text-muted-foreground text-lg sm:text-xl md:text-2xl max-w-xl">
+          <p className="hidden md:block mt-4 text-muted-foreground text-lg sm:text-xl md:text-2xl max-w-xl">
             Building products, not just projects.
           </p>
 
           {/* OPTIONAL ACCENT LINE */}
-          <div className="mt-4 h-[2px] w-94 bg-primary/60 mx-auto md:mx-0" />
-          <p className="mt-3 text-sm sm:text-base md:text-lg text-muted-foreground tracking-wide">
+          <div className="hidden md:block mt-4 h-[2px] w-94 bg-primary/60 mx-auto md:mx-0" />
+          <p className="hidden md:block mt-3 text-sm sm:text-base md:text-lg text-muted-foreground tracking-wide">
             Full-Stack Developer
           </p>
         </div>
