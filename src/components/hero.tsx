@@ -254,7 +254,7 @@ const HeroSection = () => {
       {/* CTA */}
       <div className="flex items-center justify-center md:justify-start mt-7">
         <Link
-          href={"https://drive.google.com/file/d/1Hp3SinrFrvOXqI-umzciRPoPVbe2I_mC/view?usp=sharing"}
+          href={"https://drive.google.com/file/d/1aExsDrLkrT715JKH4El6kofsXj5gPDi6/view?usp=sharing"}
           className="flex items-center gap-1 bg-primary text-background text-lg px-3 py-1 rounded-lg w-fit font-mono hover:border-primary transition duration-200"
         >
           <MdOutlineFileDownload size="22px" />
