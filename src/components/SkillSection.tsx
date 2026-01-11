@@ -27,7 +27,10 @@ import {
   SiCplusplus,
   SiVite,
   SiFirebase,
+  SiSupabase,
+  SiDocker
 } from "react-icons/si";
+import { IconCloud } from "./ui/icon-cloud";
 
 const skills = [
   { name: "React", icon: <FaReact className="text-sky-400" /> },
@@ -35,6 +38,8 @@ const skills = [
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-300" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
+  { name: "Supabase", icon: <SiSupabase className="text-green-500" /> },
+  { name: "Docker", icon: <SiDocker className="text-blue-500" /> },
   { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
   { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
   { name: "Bootstrap", icon: <SiBootstrap className="text-purple-600" /> },
@@ -55,6 +60,36 @@ const skills = [
   { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
 ];
 
+const slugs = [
+  "react",
+  "nextdotjs",
+  "prisma",
+  "drizzle",
+  "tailwindcss",
+  "typescript",
+  "javascript",
+  "supabase",
+  "docker",
+  "html5",
+  "css3",
+  "bootstrap",
+  "shadcnui",
+  "framer",
+  "nodejs",
+  "express",
+  "mongodb",
+  "mysql",
+  "cloudinary",
+  "java",
+  "c",
+  "cplusplus",
+  "git",
+  "github",
+  "figma",
+  "vite",
+  "firebase",
+]
+
 export default function SkillsSection() {
   // split into two halves: first half shown in top row, second in bottom row
   const mid = Math.ceil(skills.length / 2);
@@ -65,16 +100,25 @@ export default function SkillsSection() {
   const firstDup = [...firstHalf, ...firstHalf];
   const secondDup = [...secondHalf, ...secondHalf];
 
+  const images = slugs.map(
+    (slug) => `https://cdn.simpleicons.org/${slug}/${slug}`
+  )
 
   return (
-    <section id="skills" className="w-full py-16 bg-background text-foreground mb-6">
+    <section id="skills" className="w-full py-16 bg-background text-foreground md:mb-6">
+
+
+
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-center text-5xl sm:text-7xl font-serif mb-10 text-primary">
+        <h2 className="text-center text-5xl sm:text-7xl font-serif md:mb-10 text-primary">
           Skills
         </h2>
+        <div className="relative flex size-full items-center justify-center overflow-hidden md:hidden">
+          <IconCloud images={images} />
+        </div>
 
         {/* TOP ROW: firstHalf moving left → right (we animate from -50% → 0) */}
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden hidden md:block">
           <div
             className="flex gap-4 whitespace-nowrap will-change-transform"
             style={{
@@ -97,7 +141,7 @@ export default function SkillsSection() {
         </div>
 
         {/* BOTTOM ROW: secondHalf moving right → left (animate from 0 → -50%) */}
-        <div className="relative overflow-hidden mt-6">
+        <div className="relative overflow-hidden mt-6 hidden md:block">
           <div className="flex gap-4 whitespace-nowrap will-change-transform">
             <div className="marquee marquee--rtl">
               {secondDup.map((skill, i) => (
@@ -113,7 +157,7 @@ export default function SkillsSection() {
           </div>
         </div>
 
-        
+
       </div>
 
       {/* Styles — uses your theme tokens (bg-card, text-foreground, text-primary, border-border, etc.). */}

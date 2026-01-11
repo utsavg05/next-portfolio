@@ -135,7 +135,7 @@ export default function ProjectPage() {
 
     <section
   id="projects"
-  className="bg-background flex flex-col justify-center py-16 px-4 sm:px-6 md:px-12"
+  className="bg-background flex flex-col justify-center md:py-16 px-4 sm:px-6 md:px-12"
 >
   <div className="max-w-7xl mx-auto ">
     <h2 className="text-5xl sm:text-7xl text-center font-serif text-primary mb-6">
