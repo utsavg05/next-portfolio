@@ -11,6 +11,13 @@ import {
 
 const projects = [
   {
+    title: "SnipHUB",
+    description: "A platform to share, explore, and manage code snippets with ease",
+    image: "/sniphub_hero.png",
+    link: "https://sniphub-three.vercel.app/",
+    tech: ["Next.Js", "Typescript", "Supabase", "Drizzle ORM"],
+  },
+  {
     title: "Zync",
     description: "Real-time chat app with instant messaging.",
     image: "/zync_ss.jpg",
@@ -46,6 +53,7 @@ const projects = [
     link: "https://utsavxyz.vercel.app/",
     tech: ["Next.Js", "Typescript", "ShadcnUI"],
   },
+  
 ];
 
 export default function ProjectPage() {
