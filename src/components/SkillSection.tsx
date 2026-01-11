@@ -171,12 +171,12 @@ export default function SkillsSection() {
 
         /* LTR: move from -50% -> 0 so it appears to scroll left→right visually */
         .marquee--ltr {
-          animation: marquee-ltr 24s linear infinite;
+          animation: marquee-ltr 30s linear infinite;
         }
 
         /* RTL: move from 0 -> -50% (opposite direction) */
         .marquee--rtl {
-          animation: marquee-rtl 20s linear infinite;
+          animation: marquee-rtl 24s linear infinite;
         }
 
         /* pause when user hovers any item inside the marquee (optional nicety) */
