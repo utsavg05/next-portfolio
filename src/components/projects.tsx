@@ -148,7 +148,41 @@ export default function ProjectPage() {
     <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 w-full mx-0">
       {projects.map((project, index) => (
         <CardContainer key={index} className="inter-var w-full md:mx-0">
-          <CardBody className="relative group/card bg-card border border-border rounded-sm p-4 sm:p-5 lg:p-4 hover:shadow-2xl hover:shadow-primary/20 transition-shadow flex flex-col">
+          {/* <CardBody className="relative group/card bg-card border border-border rounded-sm p-4 sm:p-5 lg:p-4 hover:shadow-2xl hover:shadow-primary/20 transition-shadow flex flex-col backdrop-blur-sm bg-transparent "> */}
+          {/* <CardBody
+  className="
+    relative group/card
+    rounded-sm
+    p-4 sm:p-5 lg:p-4
+    flex flex-col
+
+    bg-transparent
+    backdrop-blur-lg
+
+    border border-white/10
+    shadow-lg
+    hover:shadow-2xl hover:shadow-primary/20
+    transition-shadow
+  "
+> */}
+<CardBody
+  className="
+    relative group/card
+    rounded-sm
+    p-4 sm:p-5 lg:p-4
+    flex flex-col
+
+    backdrop-blur-xl
+    bg-[rgba(255,255,255,0.02)]
+
+    border border-white/10
+    shadow-lg
+    hover:shadow-2xl hover:shadow-primary/20
+    transition-shadow
+  "
+>
+
+
             
             {/* Image */}
             <CardItem translateZ="80" className="w-full h-52 sm:h-60 lg:h-64 relative">
@@ -156,7 +190,7 @@ export default function ProjectPage() {
                 src={project.image}
                 alt={project.title}
                 fill
-                className="object-cover object-top rounded-lg group-hover/card:shadow-xl"
+                className="object-cover object-top rounded-sm group-hover/card:shadow-xl"
                 sizes="(max-width:640px) 100vw, (max-width:1024px) 50vw, 33vw"
               />
             </CardItem>
