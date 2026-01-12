@@ -20,7 +20,7 @@ export default function Home() {
       <SkillsSection />
       {/* <GithubGraph /> */}
       {/* <GithubContributionSection /> */}
-      {/* <GitHubCalender /> */}
+      <GitHubCalender />
       <ProjetPage />
       <ContactPage />
     </div>
