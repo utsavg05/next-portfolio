@@ -178,7 +178,7 @@ import { MdOutlineFileDownload } from "react-icons/md";
 
 const HeroSection = () => {
   return (
-    <section className="w-full min-h-screen md:max-w-5xl mx-auto flex flex-col justify-center px-6 md:px-15 lg:px-20 py-4 md:py-16">
+    <section className="w-full min-h-screen md:max-w-4xl mx-auto flex flex-col justify-center px-6 md:px-5 py-4 md:py-16">
       {/* Intro */}
       <p className="font-mono text-sky-900 text-md md:text-lg dark:text-chart-1 tracking-widest mb-6">
         Hi<span className="ml-1">👋</span>, my name is

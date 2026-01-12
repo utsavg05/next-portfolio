@@ -26,8 +26,8 @@ export default function ExperiencePage() {
   ];
 
   return (
-    <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12 sm:py-16">
-      <h1 className="text-3xl sm:text-4xl font-serif text-center text-primary mb-10 sm:mb-12">
+    <section id="experience" className="w-full py-16 px-4 bg-background text-foreground mb-6 max-w-4xl mx-auto">
+      <h1 className="text-3xl sm:text-3xl font-serif text-primary mb-10 sm:mb-12">
         My Journey
       </h1>
 
@@ -40,7 +40,7 @@ export default function ExperiencePage() {
             </span>
 
             {/* Card */}
-            <div className="bg-card/50 border border-border rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-sm hover:shadow-md transition w-full">
+            <div className="bg-card/50 border border-border rounded-sm sm:rounded-sm p-4 sm:p-6 shadow-sm hover:shadow-md transition w-fit">
               <h3 className="text-lg sm:text-xl font-semibold text-foreground">
                 {item.title}
               </h3>

@@ -105,20 +105,20 @@ export default function SkillsSection() {
   )
 
   return (
-    <section id="skills" className="w-full py-16 bg-background text-foreground md:mb-6">
+    <section id="skills" className="w-full py-16 bg-background text-foreground mb-6 max-w-4xl mx-auto">
 
 
 
       <div className="max-w-6xl mx-auto px-4">
-        <h2 className="text-center text-5xl sm:text-7xl font-serif md:mb-10 text-primary">
-          Skills
+        <h2 className=" text-3xl sm:text-3xl font-serif mb-10 text-primary">
+          Tools I've used
         </h2>
-        <div className="relative flex size-full items-center justify-center overflow-hidden md:hidden">
+        {/* <div className="relative flex size-full items-center justify-center overflow-hidden md:hidden">
           <IconCloud images={images} />
-        </div>
+        </div> */}
 
         {/* TOP ROW: firstHalf moving left → right (we animate from -50% → 0) */}
-        <div className="relative overflow-hidden hidden md:block">
+        <div className="relative overflow-hidden ">
           <div
             className="flex gap-4 whitespace-nowrap will-change-transform"
             style={{
@@ -141,7 +141,7 @@ export default function SkillsSection() {
         </div>
 
         {/* BOTTOM ROW: secondHalf moving right → left (animate from 0 → -50%) */}
-        <div className="relative overflow-hidden mt-6 hidden md:block">
+        <div className="relative overflow-hidden mt-6 ">
           <div className="flex gap-4 whitespace-nowrap will-change-transform">
             <div className="marquee marquee--rtl">
               {secondDup.map((skill, i) => (

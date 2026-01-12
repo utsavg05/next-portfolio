@@ -135,20 +135,20 @@ export default function ProjectPage() {
 
     <section
   id="projects"
-  className="bg-background flex flex-col justify-center md:py-16 px-4 sm:px-6 md:px-12"
+  className="bg-background flex flex-col w-full max-w-4xl mx-auto justify-center md:py-16 px-4"
 >
-  <div className="max-w-7xl mx-auto ">
-    <h2 className="text-5xl sm:text-7xl text-center font-serif text-primary mb-6">
-      Projects
+  <div className="max-w-4xl md:mx-0 mx-auto ">
+    <h2 className="text-3xl sm:text-3xl font-serif text-primary mb-4">
+      Featured Projects
     </h2>
-    <p className="text-muted-foreground text-center text-lg max-w-2xl mx-auto mb-8">
+    {/* <p className="text-muted-foreground text-center text-lg max-w-2xl mx-auto mb-8">
       A selection of my featured work.
-    </p>
+    </p> */}
 
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 sm:gap-10">
+    <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 w-full mx-0">
       {projects.map((project, index) => (
-        <CardContainer key={index} className="inter-var">
-          <CardBody className="relative group/card bg-card border border-border rounded-xl p-4 sm:p-5 lg:p-6 hover:shadow-2xl hover:shadow-primary/20 transition-shadow flex flex-col">
+        <CardContainer key={index} className="inter-var w-full md:mx-0">
+          <CardBody className="relative group/card bg-card border border-border rounded-sm p-4 sm:p-5 lg:p-4 hover:shadow-2xl hover:shadow-primary/20 transition-shadow flex flex-col">
             
             {/* Image */}
             <CardItem translateZ="80" className="w-full h-52 sm:h-60 lg:h-64 relative">
