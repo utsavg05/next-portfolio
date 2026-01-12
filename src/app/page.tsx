@@ -2,10 +2,10 @@
 import ContactPage from "@/components/ContactPage";
 import GithubGraph from "@/components/ContibutionGraph";
 import ExperiencePage from "@/components/Experience";
+import GitHubCalender from "@/components/GitHubCalender";
 import HeroSection from "@/components/hero";
 import ProjetPage from "@/components/projects";
 import SkillsSection from "@/components/SkillSection";
-import { GitHubCalendar } from 'react-github-calendar';
 // import Snowfall from 'react-snowfall';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <ExperiencePage />
       <SkillsSection />
       {/* <GithubGraph /> */}
-      <GitHubCalendar username="utsavg05" />
+      <GitHubCalender />
       <ProjetPage />
       <ContactPage />
     </div>
