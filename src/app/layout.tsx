@@ -5,6 +5,7 @@ import { DockDemo } from "@/components/DockDemo";
 import { FloatingDockDemo } from "@/components/FloatingDockDemo";
 import { Analytics } from '@vercel/analytics/next';
 import { ThemeProvider } from "next-themes";
+import SmoothScroll from "@/components/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +35,9 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
           <FloatingDockDemo />
           <DockDemo />
-          {children}
+          <SmoothScroll>
+            {children}
+          </SmoothScroll>
           <Analytics />
         </ThemeProvider>
       </body>
