@@ -124,6 +124,134 @@
 
 
 
+// "use client";
+
+// import {
+//   ContributionGraph,
+//   ContributionGraphBlock,
+//   ContributionGraphCalendar,
+//   ContributionGraphFooter,
+//   ContributionGraphLegend,
+//   ContributionGraphTotalCount,
+// } from "@/components/kibo-ui/contribution-graph";
+
+// import { useEffect, useState } from "react";
+// import {
+//   eachDayOfInterval,
+//   endOfWeek,
+//   formatISO,
+//   startOfWeek,
+// } from "date-fns";
+
+// type ContributionDay = {
+//   date: string;
+//   count: number;
+//   level: number;
+// };
+
+// const USERNAME = "utsavg05";
+
+// export default function GithubContributionSection() {
+//   const [data, setData] = useState<ContributionDay[]>([]);
+//   const [loading, setLoading] = useState(true);
+
+//   useEffect(() => {
+//     async function fetchContributions() {
+//       try {
+//         const res = await fetch(
+//           `https://github-contributions-api.jogruber.de/v4/${USERNAME}`
+//         );
+
+//         const json = await res.json();
+
+//         // ✅ 1. Date Logic: Fixed Start (Jan 1, 2025) to Today
+//         // This ensures you see ALL of last year + whatever has happened in 2026 so far.
+//         const currentYear = new Date().getFullYear();
+//         const lastYear = currentYear - 1; // 2025
+
+//         // Start: Jan 1st of Last Year (e.g., Jan 1, 2025)
+//         const start = startOfWeek(new Date(lastYear, 0, 1), {
+//           weekStartsOn: 0,
+//         });
+        
+//         // End: Today/End of current week
+//         const end = endOfWeek(new Date(), {
+//           weekStartsOn: 0,
+//         });
+
+//         const allDays = eachDayOfInterval({ start, end });
+
+//         // Map API data for quick lookup
+//         const contributionMap = new Map(
+//           json.contributions.map((c: any) => [c.date, c.count])
+//         );
+
+//         const formatted: ContributionDay[] = allDays.map((date) => {
+//           const iso = formatISO(date, { representation: "date" });
+//           const count = (contributionMap.get(iso) as number) ?? 0;
+
+//           // ✅ 2. Level Logic: Fixed Thresholds (Standard GitHub Scale)
+//           // Using a static scale prevents one busy day from "flattening" the rest of the graph
+//           // causing the "dim/incomplete" look you saw.
+//           let level = 0;
+//           if (count === 0) level = 0;
+//           else if (count <= 3) level = 1;      // Lightest
+//           else if (count <= 6) level = 2;
+//           else if (count <= 10) level = 3;
+//           else level = 4;                      // Darkest/Brightest
+
+//           return {
+//             date: iso,
+//             count,
+//             level,
+//           };
+//         });
+
+//         setData(formatted);
+//       } catch (err) {
+//         console.error("Failed to fetch GitHub contributions", err);
+//       } finally {
+//         setLoading(false);
+//       }
+//     }
+
+//     fetchContributions();
+//   }, []);
+
+//   return (
+//     <section
+//       id="github"
+//       className="w-full max-w-4xl mx-auto px-6 py-20"
+//     >
+//       {loading ? (
+//         <p className="text-sm text-muted-foreground">
+//           Loading contributions…
+//         </p>
+//       ) : (
+//         <ContributionGraph data={data}>
+//           <ContributionGraphCalendar>
+//             {({ activity, dayIndex, weekIndex }) => (
+//               <ContributionGraphBlock
+//                 key={`${activity.date}-${dayIndex}`}
+//                 activity={activity}
+//                 dayIndex={dayIndex}
+//                 weekIndex={weekIndex}
+//               />
+//             )}
+//           </ContributionGraphCalendar>
+
+//           <ContributionGraphFooter>
+//             <ContributionGraphTotalCount />
+//             <ContributionGraphLegend />
+//           </ContributionGraphFooter>
+//         </ContributionGraph>
+//       )}
+//     </section>
+//   );
+// }
+
+
+
 "use client";
 
 import {
@@ -134,118 +262,51 @@ import {
   ContributionGraphLegend,
   ContributionGraphTotalCount,
 } from "@/components/kibo-ui/contribution-graph";
+import { eachDayOfInterval, endOfYear, formatISO, startOfYear } from "date-fns";
 
-import { useEffect, useState } from "react";
-import {
-  eachDayOfInterval,
-  endOfWeek,
-  formatISO,
-  startOfWeek,
-} from "date-fns";
+const maxCount = 20;
+const maxLevel = 4;
+const now = new Date();
+const days = eachDayOfInterval({
+  start: startOfYear(now),
+  end: endOfYear(now),
+});
 
-type ContributionDay = {
-  date: string;
-  count: number;
-  level: number;
-};
+const data = days.map((date) => {
+  const c = Math.round(
+    Math.random() * maxCount - Math.random() * (0.8 * maxCount)
+  );
+  const count = Math.max(0, c);
+  const level = Math.ceil((count / maxCount) * maxLevel);
 
-const USERNAME = "utsavg05";
+  return {
+    date: formatISO(date, { representation: "date" }),
+    count,
+    level,
+  };
+});
 
-export default function GithubContributionSection() {
-  const [data, setData] = useState<ContributionDay[]>([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    async function fetchContributions() {
-      try {
-        const res = await fetch(
-          `https://github-contributions-api.jogruber.de/v4/${USERNAME}`
-        );
-
-        const json = await res.json();
-
-        // ✅ 1. Date Logic: Fixed Start (Jan 1, 2025) to Today
-        // This ensures you see ALL of last year + whatever has happened in 2026 so far.
-        const currentYear = new Date().getFullYear();
-        const lastYear = currentYear - 1; // 2025
-
-        // Start: Jan 1st of Last Year (e.g., Jan 1, 2025)
-        const start = startOfWeek(new Date(lastYear, 0, 1), {
-          weekStartsOn: 0,
-        });
-        
-        // End: Today/End of current week
-        const end = endOfWeek(new Date(), {
-          weekStartsOn: 0,
-        });
-
-        const allDays = eachDayOfInterval({ start, end });
-
-        // Map API data for quick lookup
-        const contributionMap = new Map(
-          json.contributions.map((c: any) => [c.date, c.count])
-        );
-
-        const formatted: ContributionDay[] = allDays.map((date) => {
-          const iso = formatISO(date, { representation: "date" });
-          const count = (contributionMap.get(iso) as number) ?? 0;
-
-          // ✅ 2. Level Logic: Fixed Thresholds (Standard GitHub Scale)
-          // Using a static scale prevents one busy day from "flattening" the rest of the graph
-          // causing the "dim/incomplete" look you saw.
-          let level = 0;
-          if (count === 0) level = 0;
-          else if (count <= 3) level = 1;      // Lightest
-          else if (count <= 6) level = 2;
-          else if (count <= 10) level = 3;
-          else level = 4;                      // Darkest/Brightest
-
-          return {
-            date: iso,
-            count,
-            level,
-          };
-        });
-
-        setData(formatted);
-      } catch (err) {
-        console.error("Failed to fetch GitHub contributions", err);
-      } finally {
-        setLoading(false);
-      }
-    }
-
-    fetchContributions();
-  }, []);
-
-  return (
+const GithubContributionSection = () => (
     <section
       id="github"
       className="w-full max-w-4xl mx-auto px-6 py-20"
     >
-      {loading ? (
-        <p className="text-sm text-muted-foreground">
-          Loading contributions…
-        </p>
-      ) : (
-        <ContributionGraph data={data}>
-          <ContributionGraphCalendar>
-            {({ activity, dayIndex, weekIndex }) => (
-              <ContributionGraphBlock
-                key={`${activity.date}-${dayIndex}`}
-                activity={activity}
-                dayIndex={dayIndex}
-                weekIndex={weekIndex}
-              />
-            )}
-          </ContributionGraphCalendar>
-
-          <ContributionGraphFooter>
-            <ContributionGraphTotalCount />
-            <ContributionGraphLegend />
-          </ContributionGraphFooter>
-        </ContributionGraph>
+  <ContributionGraph data={data}>
+    <ContributionGraphCalendar>
+      {({ activity, dayIndex, weekIndex }) => (
+        <ContributionGraphBlock
+          activity={activity}
+          dayIndex={dayIndex}
+          weekIndex={weekIndex}
+        />
       )}
+    </ContributionGraphCalendar>
+    <ContributionGraphFooter>
+      <ContributionGraphTotalCount />
+      <ContributionGraphLegend />
+    </ContributionGraphFooter>
+  </ContributionGraph>
     </section>
-  );
-}
+);
+
+export default GithubContributionSection;
