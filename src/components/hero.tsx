@@ -202,35 +202,35 @@ const HeroSection = () => {
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
 
         {/* LEFT CONTENT */}
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-primary text-5xl sm:text-6xl md:text-6xl lg:text-8xl font-bold font-serif leading-tight md:leading-[1.1] tracking-tight">
+        <div className="flex-1 text-center md:text-left w-fit">
+          <h1 className="text-primary text-5xl sm:text-6xl md:text-6xl lg:text-7xl w-fit font-bold font-serif leading-tight md:leading-[1.1] tracking-tight">
             Utsav Gupta
           </h1>
 
           {/* SUBTEXT — fills empty space */}
-          <p className="hidden md:block mt-4 text-muted-foreground text-lg sm:text-xl md:text-2xl max-w-xl">
+          <p className="hidden md:block mt-4 text-muted-foreground text-lg sm:text-xl md:text-2xl max-w-xl w-fit">
             Building products, not just projects.
           </p>
 
           {/* OPTIONAL ACCENT LINE */}
           <div className="hidden md:block mt-4 h-[2px] w-94 bg-primary/60 mx-auto md:mx-0" />
-          <p className="hidden md:block mt-3 text-sm sm:text-base md:text-lg text-muted-foreground tracking-wide">
+          <p className="hidden md:block mt-3 text-sm sm:text-base md:text-lg text-muted-foreground w-fit tracking-wide">
             Full-Stack Developer
           </p>
         </div>
 
         {/* RIGHT IMAGE */}
         <div
-          className="w-32 h-32 sm:w-40 sm:h-40 md:w-56 md:h-64 flex-shrink-0 overflow-hidden 
-    border border-primary/30 rounded-full md:rounded-xl 
-    shadow-lg md:shadow-[0_0_35px_-5px_rgba(244,199,83,0.6)]"
+          className="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-50 flex-shrink-0 overflow-hidden 
+    border border-primary/30 rounded-full md:rounded-lg 
+    shadow-lg md:shadow-[0_0_35px_-5px_rgba(244,199,83,0.6)] sm:mr-51"
         >
           <Image
             src={"/pp.jpg"}
             width={250}
             height={300}
             alt="profile_pic"
-            className="object-top w-full h-full"
+            className="object-cover w-full h-full"
           />
         </div>
 
