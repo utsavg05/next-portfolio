@@ -47,11 +47,11 @@ const projects = [
     tech: ["HTML", "CSS", "JavaScript"],
   },
   {
-    title: "Utsav.dev",
-    description: "Personal Portfolio Website",
-    image: "/portfolio_landing.jpg",
-    link: "https://utsavxyz.vercel.app/",
-    tech: ["Next.Js", "Typescript", "ShadcnUI"],
+    title: "Scribely",
+    description: "Create handwritten notes from youtube videos",
+    image: "/scribely.png",
+    link: "https://scribely-umber.vercel.app/",
+    tech: ["Next.Js", "Tailwind CSS"],
   },
   
 ];
