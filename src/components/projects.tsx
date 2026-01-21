@@ -12,7 +12,7 @@ import {
 const projects = [
   {
     title: "SnipHUB",
-    description: "A platform to share, explore, and manage code snippets with ease",
+    description: "A platform to share, explore, and manage code snippets with ease.",
     image: "/sniphub_hero.png",
     link: "https://sniphub-three.vercel.app/",
     tech: ["Next.Js", "Typescript", "Supabase", "Drizzle ORM"],
@@ -40,18 +40,18 @@ const projects = [
     tech: ["MongoDB", "Express", "React", "Node.js"],
   },
   {
+    title: "Scribely",
+    description: "A UI concept exploring handwritten-style study notes for digital learning.",
+    image: "/scribely.png",
+    link: "https://scribely-umber.vercel.app/",
+    tech: ["Next.Js", "Tailwind CSS"],
+  },
+  {
     title: "Retro Themed UI",
     description: "Retro-style UI with modern implementation.",
     image: "/retro.jpg",
     link: "https://retro-design-plum.vercel.app/",
     tech: ["HTML", "CSS", "JavaScript"],
-  },
-  {
-    title: "Scribely",
-    description: "Create handwritten notes from youtube videos",
-    image: "/scribely.png",
-    link: "https://scribely-umber.vercel.app/",
-    tech: ["Next.Js", "Tailwind CSS"],
   },
   
 ];
