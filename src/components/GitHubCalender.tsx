@@ -15,7 +15,7 @@ const GitHubCalender = () => {
     ,
 
 
-
+    // dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'] // GitHub dark mode colors
     dark: ['#1B1B1B', '#333333', '#666666', '#999999', '#FFFFFF'],
     // dark: ['#1f1f1f', '#2b2b2b', '#5a5a5a', '#a3a3a3', '#ffffff',]
 
