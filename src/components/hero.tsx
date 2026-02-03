@@ -255,7 +255,7 @@ const HeroSection = () => {
       {/* CTA */}
       <div className="flex items-center justify-center md:justify-start mt-7">
         <Link
-          href={"https://drive.google.com/file/d/1wOP59HZRv3sJOmr_o4jJDAQ5HMOfzPvs/view?usp=sharing"}
+          href={"https://drive.google.com/file/d/1dqCzDV8AGFhyZqj5kXN4gyE47X3y0esQ/view?usp=sharing"}
           rel="noopener noreferrer"
           target="_blank"
           className="flex items-center gap-1 bg-primary text-background text-lg px-3 py-1 rounded-lg w-fit font-mono hover:border-primary transition duration-200"
