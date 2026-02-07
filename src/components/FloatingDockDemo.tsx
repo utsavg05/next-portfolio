@@ -77,19 +77,13 @@
 
 import React from "react";
 import { FloatingDock } from "@/components/ui/floating-dock";
-import {
-  IconHome,
-  IconFolder,
-  IconBrandX,
-  IconBrandGithub,
-  IconBrandLinkedin,
-  IconFileDownload,
-} from "@tabler/icons-react";
 import { FaGithub, FaLinkedin, FaFolder } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import {
   Home,
   Mail,
+  Monitor,
+  Smartphone,
 } from "lucide-react";
 
 export function FloatingDockDemo() {
@@ -99,14 +93,21 @@ export function FloatingDockDemo() {
       icon: (
         <Home className="h-full w-full text-foreground hover:text-primary transition-colors" />
       ),
-      href: "#",
+      href: "/#",
     },
     {
-      title: "Projects",
+      title: "Web Apps",
       icon: (
-        <FaFolder className="h-full w-full text-foreground hover:text-primary transition-colors" />
+        <Monitor className="h-full w-full text-foreground hover:text-primary transition-colors" />
       ),
-      href: "#projects",
+      href: "/#projects",
+    },
+    {
+      title: "Mobile Apps",
+      icon: (
+        <Smartphone className="h-full w-full text-foreground hover:text-primary transition-colors" />
+      ),
+      href: "/mobile-apps",
     },
     {
       title: "GitHub",

@@ -286,6 +286,8 @@ import React from "react";
 import {
   Home,
   Mail,
+  Monitor,
+  Smartphone,
 } from "lucide-react"; // ✅ switched to lucide-react
 import { FaGithub, FaLinkedin, FaFolder } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
@@ -304,8 +306,9 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 
 const DATA = {
   navbar: [
-    { href: "#", icon: Home, label: "Home" },
-    { href: "#projects", icon: FaFolder, label: "Projects" },
+    { href: "/#", icon: Home, label: "Home" },
+    { href: "/#projects", icon: Monitor, label: "Web Apps" },
+    { href: "/mobile-apps", icon: Smartphone, label: "Mobile Apps" },
   ],
   social: [
     { name: "GitHub", url: "https://github.com/utsavg05", icon: FaGithub },
