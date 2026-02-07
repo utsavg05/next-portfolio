@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { DockDemo } from "@/components/DockDemo";
-import { FloatingDockDemo } from "@/components/FloatingDockDemo";
+import { DockDemo } from "@/components/pages/DockDemo";
+import { FloatingDockDemo } from "@/components/pages/FloatingDockDemo";
 import { Analytics } from '@vercel/analytics/next';
 import { ThemeProvider } from "next-themes";
-import SmoothScroll from "@/components/SmoothScroll";
+import SmoothScroll from "@/components/pages/SmoothScroll";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
