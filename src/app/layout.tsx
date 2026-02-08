@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Utsav Gupta - Software Engineer",
+  title: "Hi, I'm Utsav Gupta 👋",
   description: "Personal website of Utsav Gupta",
 };
 
