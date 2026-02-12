@@ -284,7 +284,7 @@ const HeroSection = () => {
       filter: "blur(0px)",
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], // Custom cubic-bezier for "premium" feel
+        ease: [0.16, 1, 0.3, 1], 
       },
     },
   };
@@ -365,11 +365,11 @@ const HeroSection = () => {
             shadow-lg md:shadow-[0_0_35px_-5px_rgba(244,199,83,0.6)] sm:mr-51 cursor-crosshair transition-all duration-300"
         >
           <Image
-            src={"/pp.jpg"}
+            src={"/pic.jpg"}
             width={250}
             height={300}
             alt="profile_pic"
-            className="object-cover w-full h-full"
+            className="object-cover object-top w-full h-full"
             priority
           />
         </motion.div>
