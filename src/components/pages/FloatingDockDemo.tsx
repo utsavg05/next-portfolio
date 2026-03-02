@@ -101,6 +101,7 @@ export function FloatingDockDemo() {
         <Monitor className="h-full w-full text-foreground hover:text-primary transition-colors" />
       ),
       href: "/#projects",
+      // href: "/web-apps",
     },
     {
       title: "Mobile Apps",
