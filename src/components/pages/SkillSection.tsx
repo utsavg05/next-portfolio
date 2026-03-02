@@ -338,7 +338,7 @@ export default function SkillsSection() {
               className="
                 flex items-center gap-2 px-3 py-1.5 
                 bg-white/[0.03] dark:bg-white/[0.01]
-                border border-dashed border-white/20 
+                border border-dashed border-white/30 
                 rounded-lg
                 cursor-grab active:cursor-grabbing
                 transition-colors duration-200
