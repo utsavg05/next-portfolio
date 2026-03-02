@@ -6,6 +6,7 @@ import { FloatingDockDemo } from "@/components/pages/FloatingDockDemo";
 import { Analytics } from '@vercel/analytics/next';
 import { ThemeProvider } from "next-themes";
 import SmoothScroll from "@/components/pages/SmoothScroll";
+import ClickSpark from '../components/ui/ClickSpark';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,12 +34,20 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {/* <ThemeProvider attribute="class" defaultTheme="dark" enableSystem> */}
+        <ClickSpark
+          sparkColor='#fff'
+          sparkSize={11}
+          sparkRadius={15}
+          sparkCount={8}
+          duration={400}
+        >
           <FloatingDockDemo />
           <DockDemo />
           <SmoothScroll>
             {children}
           </SmoothScroll>
-          <Analytics />
+        </ClickSpark>
+        <Analytics />
         {/* </ThemeProvider> */}
       </body>
     </html>
