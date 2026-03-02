@@ -1,11 +1,11 @@
 "use client"
 import ContactPage from "@/components/pages/ContactPage";
-import GithubContributionSection from "@/components/pages/ContibutionGraph";
-import GithubGraph from "@/components/pages/ContibutionGraph";
 import ExperiencePage from "@/components/pages/Experience";
 import GitHubCalender from "@/components/pages/GitHubCalender";
 import HeroSection from "@/components/pages/hero";
+import ProjectGateway from "@/components/pages/projects";
 import ProjetPage from "@/components/pages/projects";
+import ProofOfWork from "@/components/pages/ProofOfWork";
 import SkillsSection from "@/components/pages/SkillSection";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 // import Snowfall from 'react-snowfall';
@@ -18,10 +18,9 @@ export default function Home() {
       <HeroSection />
       <ExperiencePage />
       <SkillsSection />
-      {/* <GithubGraph /> */}
-      {/* <GithubContributionSection /> */}
       <GitHubCalender />
       <ProjetPage />
+      {/* <ProofOfWork /> */}
       <ContactPage />
     </div>
   );
