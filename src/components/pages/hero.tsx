@@ -262,9 +262,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, Variants } from "motion/react";
 import { MdOutlineFileDownload } from "react-icons/md";
+import { SiTypescript, SiReact, SiNextdotjs, SiTailwindcss, SiExpo } from "react-icons/si";
+import RotatingText from '../../components/RotatingText';
 
 const HeroSection = () => {
-  // Animation Variants
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -284,7 +285,7 @@ const HeroSection = () => {
       filter: "blur(0px)",
       transition: {
         duration: 0.8,
-        ease: [0.16, 1, 0.3, 1], 
+        ease: [0.16, 1, 0.3, 1],
       },
     },
   };
@@ -308,102 +309,136 @@ const HeroSection = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="w-full min-h-screen md:max-w-4xl mx-auto flex flex-col justify-center px-6 md:px-5 py-4 md:py-16"
+      className="w-full  md:max-w-4xl mx-auto flex flex-col justify-center px-6 md:px-5 py-4 md:py-16"
     >
-      {/* Intro */}
-      <motion.p 
+      {/* Name + Avatar Row */}
+      <motion.div
         variants={fadeInBlur}
-        className="font-mono text-sky-900 text-md md:text-lg dark:text-chart-1 tracking-widest mb-6"
+        className="flex items-center gap-4 md:gap-5"
       >
-        Hi<motion.span 
-          animate={{ rotate: [0, 20, 0] }}
-          transition={{ repeat: Infinity, duration: 2, repeatDelay: 1 }}
-          className="inline-block ml-1"
-        >👋</motion.span>, my name is
-      </motion.p>
-
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
-        {/* LEFT CONTENT */}
-        <div className="flex-1 text-center md:text-left w-fit">
-          <motion.h1 
-            variants={fadeInBlur}
-            className="text-primary text-5xl sm:text-6xl md:text-6xl lg:text-7xl w-fit font-bold font-serif leading-tight md:leading-[1.1] tracking-tight"
-          >
-            Utsav Gupta
-          </motion.h1>
-
-          <motion.p 
-            variants={fadeInBlur}
-            className="hidden md:block mt-4 text-muted-foreground text-lg sm:text-xl md:text-2xl max-w-xl w-fit"
-          >
-            Building products, not just projects.
-          </motion.p>
-
-          <motion.div 
-            variants={fadeInBlur}
-            className="hidden md:block mt-4 h-[2px] w-94 bg-primary/60 mx-auto md:mx-0" 
-          />
-          
-          <motion.p 
-            variants={fadeInBlur}
-            className="hidden md:block mt-3 text-sm sm:text-base md:text-lg text-muted-foreground w-fit tracking-wide"
-          >
-            Full-Stack Developer
-          </motion.p>
-        </div>
-
-        {/* RIGHT IMAGE */}
+        {/* Profile Image */}
         <motion.div
           variants={imageVariants}
-          whileHover={{ 
-            scale: 1.03, 
-            boxShadow: "0 0 40px -5px rgba(244,199,83,0.4)",
-            transition: { duration: 0.3 }
+          whileHover={{
+            scale: 1.05,
+            transition: { duration: 0.3 },
           }}
-          className="w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-50 flex-shrink-0 overflow-hidden 
-            border border-primary/30 rounded-full md:rounded-lg 
-            shadow-lg md:shadow-[0_0_35px_-5px_rgba(244,199,83,0.6)] sm:mr-51 cursor-crosshair transition-all duration-300"
+          className="w-15 h-15 sm:w-18 sm:h-18 md:w-24 md:h-24 flex-shrink-0 overflow-hidden rounded-lg border-2 border-primary/30 shadow-md cursor-crosshair"
         >
           <Image
             src={"/pic.jpg"}
-            width={250}
-            height={300}
+            width={96}
+            height={96}
             alt="profile_pic"
             className="object-cover object-top w-full h-full"
             priority
           />
         </motion.div>
-      </div>
 
-      {/* Tagline + Paragraph */}
-      <div className="flex flex-col gap-6 mt-8 md:mt-2 max-w-3xl">
-        <motion.h2 
-          variants={fadeInBlur}
-          className="text-muted-foreground text-3xl sm:text-4xl md:text-7xl lg:text-7xl font-serif leading-snug md:leading-[1.15] text-center md:text-left"
-        >
-          I build things for the web.
-        </motion.h2>
-
-        <motion.p 
-          variants={fadeInBlur}
-          className="dark:text-muted-foreground text-sky-900 dark:text-base sm:text-lg md:text-xl leading-relaxed md:leading-normal tracking-normal md:tracking-wide font-mono text-center md:text-left"
-        >
-          I'm a{" "}
-          <span className="relative inline-block group">
-            <span className="relative z-10 bg-sky-100 dark:bg-primary dark:text-black rounded-sm px-1.5 py-0.5">
-              Full Stack Developer
+        {/* Name + Available Badge */}
+        <div className="flex flex-col">
+          <div className="flex items-center gap-3">
+            <h1 className="text-primary text-3xl sm:text-4xl md:text-5xl font-bold font-mono tracking-tight">
+              Utsav Gupta
+            </h1>
+            <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 rounded-full px-3 py-1">
+              <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
+              Available for work
             </span>
-          </span>{" "}
-          who enjoys crafting interactive experiences for the web. Whether it's
-          designing clean interfaces or solving complex problems with code, I
-          aim to create things that truly make an impact.
-        </motion.p>
-      </div>
+          </div>
+          {/* <p className="text-muted-foreground text-sm sm:text-base md:text-lg font-mono mt-1">
+            Full-Stack Developer
+          </p> */}
+
+          <RotatingText
+            texts={['Full-Stack Developer', 'App Developer', 'Building Saassy Products']}
+            mainClassName="font-mono text-md overflow-hidden text-cyan-400 w-fit  py-0.5 mt-1 md:mt-2 justify-center items-center"
+            staggerFrom={"last"}
+            initial={{ y: "100%" }}
+            animate={{ y: 0 }}
+            exit={{ y: "-120%" }}
+            staggerDuration={0.015}
+            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            rotationInterval={3500}
+          />
+        </div>
+      </motion.div>
+
+      {/* Info Grid */}
+      <motion.div
+        variants={fadeInBlur}
+        className="mt-6 md:mt-8 grid grid-cols-1 sm:grid-cols-2 gap-x-10 gap-y-2 text-sm md:text-base font-mono text-muted-foreground"
+      >
+        <div className="flex items-center gap-2">
+          <span className="text-primary">&lt;/&gt;</span>
+          <span>Full-Stack Developer</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-primary">📱</span>
+          <span>App Developer</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-primary">📍</span>
+          <span>Delhi, India</span>
+        </div>
+        <div className="flex items-center gap-2">
+          <span className="text-primary">✉️</span>
+          <Link href="mailto:utsav.gp1204@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            utsav.gp1204@gmail.com
+          </Link>
+        </div>
+      </motion.div>
+
+      {/* Divider */}
+      <motion.div
+        variants={fadeInBlur}
+        className="mt-6 md:mt-8 h-px w-full bg-border"
+      />
+
+      {/* Bio / Hero Line */}
+      <motion.p
+        variants={fadeInBlur}
+        className="mt-6 md:mt-8 dark:text-muted-foreground text-sky-900 text-base sm:text-lg md:text-lg leading-9 font-mono max-w-4xl"
+      >
+        I build interactive and scalable web applications using{" "}
+        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+          <SiTypescript className="text-blue-500" size={14} />
+          TypeScript
+        </span>
+        ,{" "}
+        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+          <SiReact className="text-cyan-400" size={14} />
+          React
+        </span>
+        ,{" "}
+        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+          <SiNextdotjs className="dark:text-white text-black" size={14} />
+          Next.js
+        </span>
+        , and{" "}
+        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+          <SiTailwindcss className="text-cyan-500" size={14} />
+          Tailwind CSS
+        </span>
+        . I enjoy building robust full-stack systems, scalable APIs, and modern web
+        platforms. I also develop mobile apps using{" "}
+        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+          <SiReact className="text-cyan-400" size={14} />
+          React Native
+        </span>{" "}
+        and{" "}
+        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+          <SiExpo className="dark:text-white text-black" size={14} />
+          Expo
+        </span>
+        , with a strong focus on performance and clean user experiences.
+      </motion.p>
 
       {/* CTA */}
-      <motion.div 
+      <motion.div
         variants={fadeInBlur}
-        className="flex items-center justify-center md:justify-start mt-7"
+        className="flex items-center gap-4 mt-7"
       >
         <Link
           href={"https://drive.google.com/file/d/1dqCzDV8AGFhyZqj5kXN4gyE47X3y0esQ/view?usp=sharing"}
@@ -412,15 +447,12 @@ const HeroSection = () => {
           className="group relative"
         >
           <motion.div
-            whileHover={{ y: -4 }}
+            whileHover={{ y: -3 }}
             whileTap={{ scale: 0.98 }}
-            className="flex items-center gap-2 bg-primary text-background text-lg px-6 py-2 rounded-lg w-fit font-mono transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)]"
+            className="flex items-center gap-2 bg-primary text-background text-sm md:text-base px-5 py-2 rounded-lg w-fit font-mono transition-shadow duration-300 hover:shadow-[0_0_20px_rgba(var(--primary-rgb),0.4)]"
           >
-            <MdOutlineFileDownload size="22px" className="group-hover:translate-y-0.5 transition-transform duration-200" />
+            <MdOutlineFileDownload size="20px" className="group-hover:translate-y-0.5 transition-transform duration-200" />
             <span>Resume</span>
-            
-            {/* Subtle Glow Border effect */}
-            <div className="absolute inset-0 rounded-lg border border-primary opacity-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
           </motion.div>
         </Link>
       </motion.div>
