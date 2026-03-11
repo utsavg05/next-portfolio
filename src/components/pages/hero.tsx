@@ -338,7 +338,7 @@ const HeroSection = () => {
         {/* Name + Available Badge */}
         <div className="flex flex-col">
           <div className="flex items-center gap-3">
-            <h1 className="text-primary text-3xl sm:text-4xl md:text-5xl font-bold font-mono tracking-tight">
+            <h1 className="text-primary text-3xl sm:text-4xl md:text-5xl font-bold font-sans tracking-tight">
               Utsav Gupta
             </h1>
             <span className="hidden sm:inline-flex items-center gap-1.5 text-xs font-mono bg-emerald-500/10 text-emerald-500 border border-emerald-500/20 rounded-full px-3 py-1">
