@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { ExternalLink } from "lucide-react";
+import Link from "next/link";
+import { ArrowRight, ExternalLink, Smartphone } from "lucide-react";
 import {
   CardBody,
   CardContainer,
@@ -70,9 +71,25 @@ export default function ProjectPage() {
       className="bg-background flex flex-col w-full max-w-4xl mx-auto justify-center md:py-16 px-4"
     >
       <div className="max-w-4xl md:mx-0 mx-auto ">
-        <h2 className="text-3xl sm:text-3xl font-serif text-primary mb-4">
-          Featured Projects
-        </h2>
+        <div className="mb-4 flex items-center justify-between gap-3">
+          <h2 className="text-3xl sm:text-3xl font-serif text-primary">
+            Featured Projects
+          </h2>
+
+          <Link
+            href="/mobile-apps"
+            className="group relative inline-flex shrink-0 items-center gap-2 overflow-hidden rounded-md border border-border bg-card/60 px-3 py-2 text-sm text-foreground shadow-sm transition-all duration-300 hover:border-primary/40 hover:bg-card"
+          >
+            <span className="pointer-events-none absolute inset-0 opacity-30 [background:radial-gradient(circle_at_1px_1px,hsl(var(--foreground)/0.12)_1px,transparent_0)] [background-size:12px_12px]" />
+            <span className="relative z-10 rounded-sm bg-primary/10 p-1.5 text-primary">
+              <Smartphone className="h-3.5 w-3.5" />
+            </span>
+            <span className="relative z-10 hidden text-xs font-medium text-muted-foreground sm:block">
+              Mobile Apps
+            </span>
+            <ArrowRight className="relative z-10 h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
+          </Link>
+        </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-10 w-full mx-0">
           {projects.map((project, index) => (
