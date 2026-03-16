@@ -18,9 +18,34 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata: Metadata = {
-  title: "Hi, I'm Utsav Gupta 👋",
-  description: "Personal website of Utsav Gupta",
+export const metadata = {
+  title: "UtsavWorks - Creative Portfolio & Digital Solutions",
+  description:
+    "Explore the professional portfolio of Utsav, featuring innovative digital solutions, web development projects, and creative design work.",
+
+  openGraph: {
+    title: "UtsavWorks - Creative Portfolio & Digital Solutions",
+    description:
+      "Showcasing high-quality web development and creative projects. Let's build something exceptional together.",
+    url: "https://www.utsavworks.in",
+    siteName: "UtsavWorks",
+    images: [
+      {
+        url: "https://www.utsavworks.in/og-image.png",
+        width: 1307,
+        height: 727,
+      },
+    ],
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "UtsavWorks - Creative Portfolio & Digital Solutions",
+    description:
+      "Explore a collection of digital excellence and creative development projects at UtsavWorks.",
+    images: ["https://www.utsavworks.in/og-image.png"],
+  },
 };
 
 export default function RootLayout({
