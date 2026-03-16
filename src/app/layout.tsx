@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "UtsavWorks - Creative Portfolio & Digital Solutions",
+  title: "utsavworks.in",
   description:
     "Explore the professional portfolio of Utsav, featuring innovative digital solutions, web development projects, and creative design work.",
 
