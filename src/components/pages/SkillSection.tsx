@@ -230,6 +230,7 @@ import * as React from "react";
 import { motion, Variants } from "framer-motion";
 import {
   FaReact, FaNodeJs, FaJava, FaGitAlt, FaGithub, FaFigma, FaHtml5, FaCss3Alt,
+
 } from "react-icons/fa";
 import {
   SiNextdotjs, SiTailwindcss, SiTypescript, SiJavascript, SiBootstrap,
@@ -243,6 +244,7 @@ import {
   SiPostgresql,
   SiExpo
 } from "react-icons/si";
+import { FaAws } from "react-icons/fa6";
 
 const skills = [
   { name: "React", icon: <FaReact className="text-sky-400" /> },
@@ -266,7 +268,7 @@ const skills = [
   {name: "Expo", icon: <SiExpo className="dark:text-white text-black"  />},
   { name: "C++", icon: <SiCplusplus className="text-indigo-500" /> },
   {name: "Zustand", icon: <SiVite className="text-purple-500" />},
-  {name: "AWS", icon: <SiAwsamplify className="text-orange-400" />},
+  {name: "Amazon Web Services", icon: <FaAws size={20} className="" />},
   {name: "Nginx", icon: <SiNginx className="text-green-500" />},
   {name: "Linux", icon: <SiLinux className="" />},
 ];
