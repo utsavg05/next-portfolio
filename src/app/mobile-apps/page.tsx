@@ -22,22 +22,14 @@ const mobileApps = [
     repo_url: "https://github.com/utsavg05/travel_app",
     tech: ["React Native", "Expo", "Zustand"],
   },
-  // {
-  //   title: "Nova Wallet",
-  //   description: "Secure cryptocurrency wallet with multi-chain support and biometric auth.",
-  //   image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?q=80&w=500",
-  //   link: "#",
-  //   repo_url: "https://github.com/utsavkumar/nova-wallet",
-  //   tech: ["React Native", "Expo", "Zustand"],
-  // },
-  // {
-  //   title: "ZenSpace",
-  //   description: "Mental wellness app featuring guided meditation and sleep sounds.",
-  //   image: "https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=500",
-  //   link: "#",
-  //   repo_url: "https://github.com/utsavkumar/zenspace",
-  //   tech: ["Expo", "Redux", "Lottie"],
-  // },
+  {
+    title: "Streakify",
+    description: "A habit tracking app that gamifies your daily routines with streaks and rewards.",
+    image: "/streakify_home_light.jpg",
+    link: "https://youtube.com/shorts/QR1fqkbL25U?feature=share",
+    // repo_url: "https://github.com/utsavg05/streakify",
+    tech: ["React Native", "Expo", "Neon DB"],
+  },
 ];
 
 const containerVariants: Variants = {
@@ -180,6 +172,10 @@ export default function MobileShowcase() {
                     translateZ="60"
                     className="absolute top-6 left-7 z-40"
                   > */}
+                  {/* i want that app which has no github rul for now then github div should not be visible */}
+                  
+                {
+                  app.repo_url && ( 
                     <Link href={app.repo_url} target="_blank" rel="noopener noreferrer">
                     <div className="flex items-center font-semibold text-[11px] px-2 py-0.5 gap-1 bg-primary/90 w-fit hover:bg-primary rounded-lg text-black transition-colors">
                         {/* <FaGithub size={16} /> */}
@@ -187,6 +183,8 @@ export default function MobileShowcase() {
                          <SiGithub />
                     </div>
                     </Link>
+                  )
+                }
                     </div>
                   {/* </CardItem> */}
 
