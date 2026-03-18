@@ -240,7 +240,8 @@ import {
   SiLinux,
   SiAwsorganizations,
   SiAwsamplify,
-  SiPostgresql
+  SiPostgresql,
+  SiExpo
 } from "react-icons/si";
 
 const skills = [
@@ -262,6 +263,7 @@ const skills = [
   { name: "Figma", icon: <FaFigma className="text-pink-500" /> },
   { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
   { name: "React Native", icon: <FaReact className="text-sky-400" /> },
+  {name: "Expo", icon: <SiExpo className="dark:text-white text-black"  />},
   { name: "C++", icon: <SiCplusplus className="text-indigo-500" /> },
   {name: "Zustand", icon: <SiVite className="text-purple-500" />},
   {name: "AWS", icon: <SiAwsamplify className="text-orange-400" />},
