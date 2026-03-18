@@ -234,7 +234,13 @@ import {
 import {
   SiNextdotjs, SiTailwindcss, SiTypescript, SiJavascript, SiBootstrap,
   SiShadcnui, SiFramer, SiExpress, SiMongodb, SiMysql, SiCloudinary,
-  SiC, SiCplusplus, SiVite, SiFirebase, SiSupabase, SiDocker
+  SiC, SiCplusplus, SiVite, SiFirebase, SiSupabase, SiDocker,
+  SiAwslambda,
+  SiNginx,
+  SiLinux,
+  SiAwsorganizations,
+  SiAwsamplify,
+  SiPostgresql
 } from "react-icons/si";
 
 const skills = [
@@ -251,13 +257,16 @@ const skills = [
   { name: "Framer Motion", icon: <SiFramer className="text-pink-400" /> },
   { name: "ShadCN UI", icon: <SiShadcnui className="text-white" /> },
   { name: "Java", icon: <FaJava className="text-red-500" /> },
-  { name: "MySQL", icon: <SiMysql className="text-blue-400" /> },
+  { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
   { name: "Figma", icon: <FaFigma className="text-pink-500" /> },
   { name: "Firebase", icon: <SiFirebase className="text-yellow-400" /> },
   { name: "React Native", icon: <FaReact className="text-sky-400" /> },
   { name: "C++", icon: <SiCplusplus className="text-indigo-500" /> },
   {name: "Zustand", icon: <SiVite className="text-purple-500" />},
+  {name: "AWS", icon: <SiAwsamplify className="text-orange-400" />},
+  {name: "Nginx", icon: <SiNginx className="text-green-500" />},
+  {name: "Linux", icon: <SiLinux className="" />},
 ];
 
 const containerVariants: Variants = {
