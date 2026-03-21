@@ -303,6 +303,18 @@ const HeroSection = () => {
     },
   };
 
+  const techHighlightClass =
+    "relative isolate inline-flex items-center gap-1.5 px-1.5 py-0.5 text-sm font-semibold text-primary rounded-[2px] before:content-[''] before:absolute before:left-[-0.2em] before:right-[-0.2em] before:top-[58%] before:-translate-y-1/2 before:h-[0.95em] before:bg-primary/25 dark:before:bg-primary/35 before:rounded-[3px] before:skew-x-[-7deg] before:blur-[0.2px] before:-z-10";
+
+  const techHighlightVariants = [
+    "before:left-[-0.28em] before:right-[-0.16em] before:rotate-[-1.8deg]",
+    "before:left-[-0.18em] before:right-[-0.26em] before:rotate-[-0.8deg]",
+    "before:left-[-0.32em] before:right-[-0.08em] before:rotate-[-1.4deg]",
+    "before:left-[-0.12em] before:right-[-0.24em] before:rotate-[-0.6deg]",
+    "before:left-[-0.3em] before:right-[-0.12em] before:rotate-[-1.6deg]",
+    "before:left-[-0.16em] before:right-[-0.3em] before:rotate-[-0.9deg]",
+  ];
+
   return (
     <motion.section
       variants={containerVariants}
@@ -399,36 +411,36 @@ const HeroSection = () => {
       {/* Bio / Hero Line */}
       <motion.p
         variants={fadeInBlur}
-        className="mt-6 md:mt-8 dark:text-muted-foreground text-sky-900 text-base sm:text-lg md:text-lg leading-9 font-mono max-w-4xl"
+        className="mt-6 md:mt-8 dark:text-muted-foreground text-sky-900 text-sm tracking-tighter sm:text-lg md:text-lg md:leading-9 font-mono max-w-4xl"
       >
         I build interactive and scalable web applications using{" "}
-        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+        <span className={`${techHighlightClass} ${techHighlightVariants[0]}`}>
           <SiTypescript className="text-blue-500" size={14} />
           TypeScript
         </span>
         ,{" "}
-        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+        <span className={`${techHighlightClass} ${techHighlightVariants[1]}`}>
           <SiReact className="text-cyan-400" size={14} />
           React
         </span>
         ,{" "}
-        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+        <span className={`${techHighlightClass} ${techHighlightVariants[2]}`}>
           <SiNextdotjs className="dark:text-white text-black" size={14} />
           Next.js
         </span>
         , and{" "}
-        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+        <span className={`${techHighlightClass} ${techHighlightVariants[3]}`}>
           <SiTailwindcss className="text-cyan-500" size={14} />
           Tailwind CSS
         </span>
         . I enjoy building robust full-stack systems, scalable APIs, and modern web
         platforms. I also develop mobile apps using{" "}
-        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+        <span className={`${techHighlightClass} ${techHighlightVariants[4]}`}>
           <SiReact className="text-cyan-400" size={14} />
           React Native
         </span>{" "}
         and{" "}
-        <span className="inline-flex items-center gap-1.5 bg-sky-100 dark:bg-sky-900/30 dark:text-sky-300 text-sky-800 rounded-sm border-dotted border-2 border-sky-300 px-2 py-0.5 text-sm font-semibold">
+        <span className={`${techHighlightClass} ${techHighlightVariants[5]}`}>
           <SiExpo className="dark:text-white text-black" size={14} />
           Expo
         </span>
@@ -438,7 +450,7 @@ const HeroSection = () => {
       {/* CTA */}
       <motion.div
         variants={fadeInBlur}
-        className="flex items-center gap-4 mt-7"
+        className="flex items-center gap-4 mt-9"
       >
         <Link
           href={"https://drive.google.com/file/d/1OABcOufYAOlPGb0HZNeNXM4tSUhaATyx/view?usp=sharing"}
