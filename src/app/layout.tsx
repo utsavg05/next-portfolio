@@ -7,6 +7,9 @@ import { Analytics } from '@vercel/analytics/next';
 import { ThemeProvider } from "next-themes";
 import SmoothScroll from "@/components/pages/SmoothScroll";
 import ClickSpark from '../components/ui/ClickSpark';
+import Particles from "@/components/Particles";
+import Galaxy from "@/components/Galaxy";
+import DotGrid from "@/components/DotGrid";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -63,7 +66,7 @@ export default function RootLayout({
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZKXXR7QD2"></script>
       <script>
         {
-        `window.dataLayer = window.dataLayer || [];
+          `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
 
@@ -71,24 +74,64 @@ export default function RootLayout({
         `}
       </script>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
-        {/* <ThemeProvider attribute="class" defaultTheme="dark" enableSystem> */}
-        <ClickSpark
-          sparkColor='#fff'
-          sparkSize={11}
-          sparkRadius={15}
-          sparkCount={8}
-          duration={400}
-        >
-          <FloatingDockDemo />
-          <DockDemo />
-          <SmoothScroll>
-            {children}
-          </SmoothScroll>
-        </ClickSpark>
-        <Analytics />
-        {/* </ThemeProvider> */}
+        <div className="fixed inset-0 -z-10">
+          <Particles
+            particleColors={["#ffffff"]}
+            particleCount={200}
+            particleSpread={10}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover
+            alphaParticles={false}
+            disableRotation={false}
+            pixelRatio={1}
+          />
+          {/* <Galaxy
+            mouseRepulsion
+            mouseInteraction
+            density={1}
+            glowIntensity={0.3}
+            saturation={0}
+            hueShift={140}
+            twinkleIntensity={0.3}
+            rotationSpeed={0.1}
+            repulsionStrength={2}
+            autoCenterRepulsion={0}
+            starSpeed={0.5}
+            speed={1}
+          /> */}
+          {/* <DotGrid
+            dotSize={5}
+            gap={15}
+            baseColor="#271E37"
+            activeColor="#5227FF"
+            proximity={120}
+            shockRadius={250}
+            shockStrength={5}
+            resistance={750}
+            returnDuration={1.5}
+          /> */}
+        </div>
+        <div className="relative z-10">
+          {/* <ThemeProvider attribute="class" defaultTheme="dark" enableSystem> */}
+          <ClickSpark
+            sparkColor='#fff'
+            sparkSize={11}
+            sparkRadius={15}
+            sparkCount={8}
+            duration={400}
+          >
+            <FloatingDockDemo />
+            <DockDemo />
+            <SmoothScroll>
+              {children}
+            </SmoothScroll>
+          </ClickSpark>
+          <Analytics />
+          {/* </ThemeProvider> */}
+        </div>
       </body>
     </html>
   );

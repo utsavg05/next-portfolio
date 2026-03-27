@@ -7,7 +7,7 @@ export default function ContactPage() {
     return (
         <section
             id="contact"
-            className="bg-background max-h-screen flex flex-col items-center justify-center py-16 px-4 mb-12"
+            className="bg-transparent max-h-screen flex flex-col items-center justify-center py-16 px-4 mb-12"
         >
             <div className="max-w-xl text-center space-y-7">
                 <h2 className="text-4xl sm:text-6xl font-serif text-primary">Get in Touch</h2>

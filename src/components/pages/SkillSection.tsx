@@ -306,7 +306,7 @@ export default function SkillsSection() {
             whileInView={{ opacity: 1, x: 0 }}
             className="text-3xl sm:text-3xl font-serif tracking-tight text-primary"
           >
-            Skills
+            Tools that I've used
           </motion.h2>
 
           {/* Sketchy "Drag me" hint */}
