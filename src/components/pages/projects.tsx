@@ -48,13 +48,13 @@ const projects = [
     link: "https://jobseek-ete7.onrender.com/",
     tech: ["MongoDB", "Express", "React", "Node.js"],
   },
-  {
-    title: "Scribely",
-    description: "A UI concept exploring handwritten-style study notes for digital learning.",
-    image: "/scribely.png",
-    link: "https://scribely-umber.vercel.app/",
-    tech: ["Next.Js", "Tailwind CSS"],
-  },
+  // {
+  //   title: "Scribely",
+  //   description: "A UI concept exploring handwritten-style study notes for digital learning.",
+  //   image: "/scribely.png",
+  //   link: "https://scribely-umber.vercel.app/",
+  //   tech: ["Next.Js", "Tailwind CSS"],
+  // },
   {
     title: "Retro Themed UI",
     description: "Retro-style UI with modern implementation.",
