@@ -18,10 +18,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "utsavworks.in",
   description:
     "Explore the professional portfolio of Utsav, featuring innovative digital solutions, web development projects, and creative design work.",
+
+  verification: {
+    google: "HoSogLRKyeKm49rn6z6HAumT6zhV4euFd0yxOm6ZruU",
+  },
 
   openGraph: {
     title: "UtsavWorks - Creative Portfolio & Digital Solutions",
