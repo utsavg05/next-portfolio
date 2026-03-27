@@ -95,6 +95,7 @@ export default function ProjectPage() {
           {projects.map((project, index) => (
             <CardContainer key={index} className="inter-var w-full md:mx-0">
               <CardBody
+              // border border-white/10
                 className="
     relative group/card
     rounded-sm
@@ -104,7 +105,7 @@ export default function ProjectPage() {
     backdrop-blur-xl
     bg-[rgba(255,255,255,0.02)]
 
-    border border-white/10
+    
     shadow-lg
     hover:shadow-2xl hover:shadow-primary/20
     transition-shadow

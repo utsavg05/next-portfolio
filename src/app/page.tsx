@@ -4,7 +4,7 @@ import ExperiencePage from "@/components/pages/Experience";
 import GitHubCalender from "@/components/pages/GitHubCalender";
 import HeroSection from "@/components/pages/hero";
 import ProjetPage from "@/components/pages/projects";
-import ProofOfWork from "@/components/pages/ProofOfWork";
+// import ProofOfWork from "@/components/pages/ProofOfWork";
 import SkillsSection from "@/components/pages/SkillSection";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
 // import Snowfall from 'react-snowfall';
