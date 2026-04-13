@@ -10,6 +10,7 @@ import ClickSpark from '../components/ui/ClickSpark';
 import Particles from "@/components/Particles";
 import Galaxy from "@/components/Galaxy";
 import DotGrid from "@/components/DotGrid";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -63,8 +64,8 @@ export default function RootLayout({
   return (
     <html lang="en" className="dark">
       {/* <!-- Google tag (gtag.js) --> */}
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZKXXR7QD2"></script>
-      <script>
+      <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZKXXR7QD2"></Script>
+      <Script>
         {
           `window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
@@ -72,7 +73,7 @@ export default function RootLayout({
 
         gtag('config', 'G-2ZKXXR7QD2');
         `}
-      </script>
+      </Script>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >

@@ -13,6 +13,13 @@ import { HoverBorderGradient } from "../ui/hover-border-gradient";
 
 const projects = [
   {
+    title: "Scribely",
+    description: "AI-Powered Note Generator: Transforms videos into structured handwritten-style notes for enhanced learning and retention.",
+    image: "/scribely_hero.png",
+    link: "https://scribely.site",
+    tech: ["Next.Js", "Typescript", "NeonDB", "Prisma"],
+  },
+  {
     title: "SnipHUB",
     description: "A platform to share, explore, and manage code snippets with ease.",
     image: "/sniphub_hero.png",
@@ -48,21 +55,6 @@ const projects = [
     link: "https://jobseek-ete7.onrender.com/",
     tech: ["MongoDB", "Express", "React", "Node.js"],
   },
-  // {
-  //   title: "Scribely",
-  //   description: "A UI concept exploring handwritten-style study notes for digital learning.",
-  //   image: "/scribely.png",
-  //   link: "https://scribely-umber.vercel.app/",
-  //   tech: ["Next.Js", "Tailwind CSS"],
-  // },
-  {
-    title: "Retro Themed UI",
-    description: "Retro-style UI with modern implementation.",
-    image: "/retro.jpg",
-    link: "https://retro-design-plum.vercel.app/",
-    tech: ["HTML", "CSS", "JavaScript"],
-  },
-
 ];
 
 export default function ProjectPage() {
