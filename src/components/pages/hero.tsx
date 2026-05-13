@@ -335,12 +335,12 @@ const HeroSection = () => {
             scale: 1.05,
             transition: { duration: 0.3 },
           }}
-          className="w-15 h-15 sm:w-18 sm:h-18 md:w-24 md:h-24 flex-shrink-0 overflow-hidden rounded-lg border-2 border-primary/30 shadow-md cursor-crosshair"
+          className="w-18 h-18 sm:w-22 sm:h-22 md:w-28 md:h-28 flex-shrink-0 overflow-hidden rounded-lg border-2 border-primary/30 shadow-md cursor-crosshair"
         >
           <Image
             src={"/pic.jpg"}
-            width={96}
-            height={96}
+            width={130}
+            height={130}
             alt="profile_pic"
             className="object-cover object-top w-full h-full"
             priority
@@ -374,7 +374,17 @@ const HeroSection = () => {
             transition={{ type: "spring", damping: 30, stiffness: 400 }}
             rotationInterval={3500}
           />
+
+          <Link 
+            href="https://scribely.site" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-sm md:text-lg font-mono text-white underline hover:text-primary transition-colors flex items-center gap-1 mt-1"
+          >
+            Building scribely.site
+          </Link>
         </div>
+
       </motion.div>
 
       {/* Info Grid */}
