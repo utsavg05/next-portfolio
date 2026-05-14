@@ -41,20 +41,20 @@ const projects = [
     link: "https://zync-three.vercel.app",
     tech: ["MongoDB", "Express", "React", "Node.js"],
   },
-  {
-    title: "Smriti AI",
-    description: "All-in-one learning assistant powered by AI.",
-    image: "/smritiAi.jpg",
-    link: "https://www.smriti.live/",
-    tech: ["Next.js", "TypeScript", "Gemini API", "Supabase"],
-  },
-  {
-    title: "JobSeek",
-    description: "MERN job portal with role-based access.",
-    image: "/jobseek_ss.jpg",
-    link: "https://jobseek-ete7.onrender.com/",
-    tech: ["MongoDB", "Express", "React", "Node.js"],
-  },
+  // {
+  //   title: "Smriti AI",
+  //   description: "All-in-one learning assistant powered by AI.",
+  //   image: "/smritiAi.jpg",
+  //   link: "https://www.smriti.live/",
+  //   tech: ["Next.js", "TypeScript", "Gemini API", "Supabase"],
+  // },
+  // {
+  //   title: "JobSeek",
+  //   description: "MERN job portal with role-based access.",
+  //   image: "/jobseek_ss.jpg",
+  //   link: "https://jobseek-ete7.onrender.com/",
+  //   tech: ["MongoDB", "Express", "React", "Node.js"],
+  // },
 ];
 
 export default function ProjectPage() {
