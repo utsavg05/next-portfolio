@@ -17,7 +17,7 @@ const projects = [
     description: "AI-Powered Note Generator: Transforms videos into structured handwritten-style notes for enhanced learning and retention.",
     image: "/scribely-new-hero.png",
     link: "https://scribely.site",
-    tech: ["Next.Js", "Typescript", "NeonDB", "Prisma"],
+    tech: ["Next.Js", "Typescript", "NeonDB", "Prisma", "GenAI"],
   },
   {
     title: "SnipHUB",
