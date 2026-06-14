@@ -463,7 +463,7 @@ const HeroSection = () => {
         className="flex items-center gap-4 mt-9"
       >
         <Link
-          href={"https://drive.google.com/file/d/11RADnx84TaTeWz1p0m7Jqw6s10Fl2nfk/view?usp=sharing"}
+          href={"https://drive.google.com/file/d/1OABcOufYAOlPGb0HZNeNXM4tSUhaATyx/view?usp=sharing"}
           rel="noopener noreferrer"
           target="_blank"
           className="group relative"
