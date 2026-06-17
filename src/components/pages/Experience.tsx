@@ -231,10 +231,11 @@ export default function ExperiencePage() {
       duration: "June – July 2025",
       icon: <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
       details: [
-        "Integrated IVR system with CRM platforms for call automation.",
-        "Built a Chrome Extension softphone widget for click-to-call inside CRM.",
-        "Developed backend APIs for syncing call logs with CRM systems.",
-        "Worked on AI-powered assistant integration for smarter workflows.",
+        "Designed and developed a CRM-telephony integration platform connecting IVR services with Kylas CRM APIs, enabling automated call tracking and streamlined sales workflows.",
+        "Built a Chrome Extension Dialer using DOM injection, allowing sales teams to initiate calls directly from CRM lead profiles with a single click.",
+        "Implemented call log synchronization pipelines that process IVR call records, match them with CRM leads, and create call activities automatically.",
+        "Integrated Sensibot conversational chat solutions within Kylas CRM, enabling centralized customer interaction management and improved response times.",
+        "Delivered scalable integrations across CRM, telephony, and backend systems using REST APIs, event-driven processing, and real-time data synchronization.",
       ],
     },
   ];
