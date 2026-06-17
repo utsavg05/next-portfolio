@@ -136,7 +136,7 @@ export function FloatingDockDemo() {
       icon: (
         <Mail className="h-full w-full text-foreground hover:text-primary transition-colors" />
       ),
-      href: "mailto:utsav.gp1204@gmail.com", // Place your resume inside /public
+      href: "mailto:work.utsavg21@gmail.com", // Place your resume inside /public
       download: true,
       target: "_blank",
     },

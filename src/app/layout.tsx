@@ -11,6 +11,7 @@ import Particles from "@/components/Particles";
 import Galaxy from "@/components/Galaxy";
 import DotGrid from "@/components/DotGrid";
 import Script from "next/script";
+import DotField from "@/components/DotField";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -78,7 +79,21 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <div className="fixed inset-0 -z-10">
-          <Particles
+          {/* <DotField
+            dotRadius={1.5}
+            dotSpacing={14}
+            bulgeStrength={67}
+            glowRadius={160}
+            sparkle={false}
+            waveAmplitude={0}
+            cursorRadius={500}
+            cursorForce={0.1}
+            bulgeOnly
+            gradientFrom="#A855F7"
+            gradientTo="#B497CF"
+            glowColor="#120F17"
+          /> */}
+          {/* <Particles
             particleColors={["#ffffff"]}
             particleCount={200}
             particleSpread={10}
@@ -88,7 +103,7 @@ export default function RootLayout({
             alphaParticles={false}
             disableRotation={false}
             pixelRatio={1}
-          />
+          /> */}
           {/* <Galaxy
             mouseRepulsion
             mouseInteraction

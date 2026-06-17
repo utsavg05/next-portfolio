@@ -406,8 +406,8 @@ const HeroSection = () => {
         </div>
         <div className="flex items-center gap-2">
           <span className="text-primary">✉️</span>
-          <Link href="mailto:utsav.gp1204@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-            utsav.gp1204@gmail.com
+          <Link href="mailto:work.utsavg21@gmail.com" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+            work.utsavg21@gmail.com
           </Link>
         </div>
       </motion.div>
