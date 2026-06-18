@@ -321,7 +321,7 @@ const HeroSection = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="w-full  md:max-w-4xl mx-auto flex flex-col justify-center px-6 md:px-5 py-4 md:py-16"
+      className="w-full  md:max-w-4xl mx-auto flex flex-col justify-center px-6 md:px-5 py-4 md:pb-16 md:pt-10"
     >
       {/* Name + Avatar Row */}
       <motion.div

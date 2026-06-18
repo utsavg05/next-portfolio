@@ -14,6 +14,8 @@ import Script from "next/script";
 import DotField from "@/components/DotField";
 import TopNav from "@/components/pages/TopNav";
 import Footer from "@/components/pages/Footer";
+import LightRays from "@/components/LightRays";
+import SideRays from "@/components/SideRays";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -81,6 +83,38 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
         <div className="fixed inset-0 -z-10">
+          {/* <div
+            className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
+          />
+          <div className="pointer-events-none absolute inset-0 bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)] dark:bg-black" /> */}
+          {/* <SideRays
+            speed={2.5}
+            rayColor1="#EAB308"
+            rayColor2="#96c8ff"
+            intensity={2}
+            spread={2}
+            origin="top-right"
+            tilt={0}
+            saturation={1.5}
+            blend={0.75}
+            falloff={1.6}
+            opacity={1}
+          /> */}
+          {/* <LightRays
+            raysOrigin="top-center"
+            raysColor="#ffffff"
+            raysSpeed={1}
+            lightSpread={0.5}
+            rayLength={3}
+            followMouse={true}
+            mouseInfluence={0.1}
+            noiseAmount={0}
+            distortion={0}
+            className="custom-rays"
+            pulsating={false}
+            fadeDistance={1}
+            saturation={1}
+          /> */}
           {/* <DotField
             dotRadius={1.5}
             dotSpacing={14}
