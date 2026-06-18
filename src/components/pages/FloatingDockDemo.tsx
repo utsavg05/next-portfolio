@@ -84,6 +84,7 @@ import {
   Mail,
   Monitor,
   Smartphone,
+  PenLine,
 } from "lucide-react";
 
 export function FloatingDockDemo() {
@@ -109,6 +110,13 @@ export function FloatingDockDemo() {
         <Smartphone className="h-full w-full text-foreground hover:text-primary transition-colors" />
       ),
       href: "/mobile-apps",
+    },
+    {
+      title: "Blog",
+      icon: (
+        <PenLine className="h-full w-full text-foreground hover:text-primary transition-colors" />
+      ),
+      href: "/blog",
     },
     {
       title: "GitHub",

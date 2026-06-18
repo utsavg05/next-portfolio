@@ -7,7 +7,8 @@ import {
   Mail,
   Monitor,
   Smartphone,
-} from "lucide-react"; // ✅ switched to lucide-react
+  PenLine,
+} from "lucide-react";
 import { FaGithub, FaLinkedin, FaFolder } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -28,6 +29,7 @@ const DATA = {
     { href: "/#", icon: Home, label: "Home" },
     { href: "/#projects", icon: Monitor, label: "Web Apps" },
     { href: "/mobile-apps", icon: Smartphone, label: "Mobile Apps" },
+    { href: "/blog", icon: PenLine, label: "Blog" },
   ],
   social: [
     { name: "GitHub", url: "https://github.com/utsavg05", icon: FaGithub },

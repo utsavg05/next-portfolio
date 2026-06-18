@@ -12,6 +12,7 @@ import Galaxy from "@/components/Galaxy";
 import DotGrid from "@/components/DotGrid";
 import Script from "next/script";
 import DotField from "@/components/DotField";
+import TopNav from "@/components/pages/TopNav";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -139,6 +140,7 @@ export default function RootLayout({
             sparkCount={8}
             duration={400}
           >
+            <TopNav />
             <FloatingDockDemo />
             <DockDemo />
             <SmoothScroll>

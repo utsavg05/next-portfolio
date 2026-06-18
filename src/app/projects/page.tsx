@@ -81,16 +81,16 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function ProjectsPage() {
   return (
-    <div className="flex flex-col w-full max-w-4xl mx-auto px-4 py-16 md:py-24">
-      <Link
+    <div className="flex flex-col w-full max-w-4xl mx-auto px-4 py-16 ">
+      {/* <Link
         href="/"
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10 w-fit"
       >
         <ArrowLeft className="h-4 w-4" />
         Back home
-      </Link>
+      </Link> */}
 
-      <h1 className="text-4xl sm:text-5xl font-serif text-primary mb-4">
+      <h1 className="text-4xl sm:text-4xl font-serif text-primary mb-4">
         All Projects
       </h1>
       <p className="text-muted-foreground mb-12 max-w-lg">
