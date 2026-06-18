@@ -101,15 +101,14 @@ export function FloatingDockDemo() {
       icon: (
         <Monitor className="h-full w-full text-foreground hover:text-primary transition-colors" />
       ),
-      href: "/#projects",
-      // href: "/web-apps",
+      href: "/projects#web-apps",
     },
     {
       title: "Mobile Apps",
       icon: (
         <Smartphone className="h-full w-full text-foreground hover:text-primary transition-colors" />
       ),
-      href: "/mobile-apps",
+      href: "/projects#mobile-apps",
     },
     {
       title: "Blog",

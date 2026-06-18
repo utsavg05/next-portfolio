@@ -100,10 +100,11 @@ export default function ProjectsPage() {
 
       {/* Web Projects */}
       <motion.section
+        id="web-apps"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="mb-16"
+        className="mb-16 scroll-mt-20"
       >
         <div className="flex items-center gap-2 mb-6">
           <Globe className="h-5 w-5 text-primary" />
@@ -121,10 +122,12 @@ export default function ProjectsPage() {
 
       {/* Mobile Projects */}
       <motion.section
+        id="mobile-apps"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, margin: "-50px" }}
+        className="scroll-mt-20"
       >
         <div className="flex items-center gap-2 mb-6">
           <Smartphone className="h-5 w-5 text-primary" />

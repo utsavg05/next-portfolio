@@ -9,6 +9,13 @@ export const metadata: Metadata = {
   title: "Blog | Utsav Gupta",
   description:
     "Thoughts on building products, indie hacking, and lessons learned along the way.",
+  openGraph: {
+    title: "Blog | Utsav Gupta",
+    description:
+      "Thoughts on building products, indie hacking, and lessons learned along the way.",
+    url: "https://www.utsavworks.in/blog",
+    type: "website",
+  },
 };
 
 export default function BlogPage() {

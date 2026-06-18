@@ -27,8 +27,8 @@ import { Dock, DockIcon } from "@/components/magicui/dock";
 const DATA = {
   navbar: [
     { href: "/#", icon: Home, label: "Home" },
-    { href: "/#projects", icon: Monitor, label: "Web Apps" },
-    { href: "/mobile-apps", icon: Smartphone, label: "Mobile Apps" },
+    { href: "/projects#web-apps", icon: Monitor, label: "Web Apps" },
+    { href: "/projects#mobile-apps", icon: Smartphone, label: "Mobile Apps" },
     { href: "/blog", icon: PenLine, label: "Blog" },
   ],
   social: [

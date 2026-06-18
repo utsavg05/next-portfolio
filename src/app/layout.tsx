@@ -13,6 +13,7 @@ import DotGrid from "@/components/DotGrid";
 import Script from "next/script";
 import DotField from "@/components/DotField";
 import TopNav from "@/components/pages/TopNav";
+import Footer from "@/components/pages/Footer";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -146,6 +147,7 @@ export default function RootLayout({
             <SmoothScroll>
               {children}
             </SmoothScroll>
+            {/* <Footer /> */}
           </ClickSpark>
           <Analytics />
           {/* </ThemeProvider> */}
