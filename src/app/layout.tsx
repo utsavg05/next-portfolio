@@ -16,6 +16,7 @@ import TopNav from "@/components/pages/TopNav";
 import Footer from "@/components/pages/Footer";
 import LightRays from "@/components/LightRays";
 import SideRays from "@/components/SideRays";
+import TextCursor from "@/components/TextCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -82,6 +83,16 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
+        {/* <TextCursor
+          // text="⚛️"
+          text="🛩️"
+          spacing={80}
+          followMouseDirection
+          randomFloat
+          exitDuration={0.3}
+          removalInterval={20}
+          maxPoints={10}
+        /> */}
         <div className="fixed inset-0 -z-10">
           {/* <div
             className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
