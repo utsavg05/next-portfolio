@@ -34,7 +34,7 @@ const DATA = {
   social: [
     { name: "GitHub", url: "https://github.com/utsavg05", icon: FaGithub },
     { name: "LinkedIn", url: "https://www.linkedin.com/in/utsav-gupta-3443a0324", icon: FaLinkedin },
-    { name: "X", url: "https://x.com/0xdevug", icon: FaXTwitter }, // Lucide uses Twitter instead of X
+    // { name: "X", url: "https://x.com/0xdevug", icon: FaXTwitter }, // Lucide uses Twitter instead of X
     { name: "Email", url: "mailto:work.utsavg21@gmail.com", icon: Mail },
   ],
 };
