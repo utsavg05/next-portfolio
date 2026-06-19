@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, Calendar, Clock } from "lucide-react";
+import { Calendar, Clock } from "lucide-react";
 import { getAllPosts } from "@/lib/blog";
 import { format } from "date-fns";
 
@@ -11,17 +11,10 @@ export default function RecentBlogs() {
 
   return (
     <section className="flex flex-col w-full max-w-4xl mx-auto mt-8 sm:mt-0 px-4 mb-4">
-      <div className="mb-6 flex items-center justify-between gap-3">
+      <div className="mb-6">
         <h2 className="text-3xl sm:text-3xl font-serif text-primary">
           Most recent blogs
         </h2>
-        <Link
-          href="/blog"
-          className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
-        >
-          View all
-          <ArrowRight className="h-4 w-4" />
-        </Link>
       </div>
 
       <div className="flex flex-col gap-6">
