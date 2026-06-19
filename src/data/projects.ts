@@ -91,8 +91,7 @@ export const projects: Project[] = [
   },
   {
     title: "Futurme-OS",
-    description:
-      "FutureMe OS is a gamified life simulation app that helps users see how their daily habits can shape their next 7, 30, and 90 days. Users can track habits like sleep, spending, study, fitness, and screen time, simulate future outcomes, complete quests, earn XP, unlock badges, and improve their “Future Self” one choice at a time.",
+    description:"A gamified life simulation app where you track habits like sleep, spending, study, and fitness to shape your future. Simulate outcomes, complete quests, earn XP, and unlock badges to improve your Future Self.",
     image: "/futuremeos.png",
     link: "https://youtube.com/shorts/BcSy6lUR0go?si=mvBNW0hJOu2ew335",
     tech: ["React Native", "Expo", "Neon DB"],
