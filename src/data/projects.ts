@@ -64,6 +64,7 @@ export const projects: Project[] = [
     description: "MERN job portal with role-based access.",
     image: "/jobseek-webp.webp",
     link: "https://jobseek-ete7.onrender.com/",
+    repoUrl: "https://github.com/utsavg05/Job-Portal",
     tech: ["MongoDB", "Express", "React", "Node.js"],
     category: "web",
     featured: false,
