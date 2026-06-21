@@ -11,7 +11,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Scribely (630+ users)",
+    title: "Scribely (640+ users)",
     description:
       "All-in-one AI study toolkit for students and learners. It turns your YouTube lectures, long PDFs, or any study content into handwritten notes, flashcards, quizzes, cheat sheets and more in seconds.",
     image: "/scribely.webp",
@@ -50,15 +50,6 @@ export const projects: Project[] = [
     category: "web",
     featured: true,
   },
-  // {
-  //   title: "Smriti AI",
-  //   description: "All-in-one learning assistant powered by AI.",
-  //   image: "/smritiAi.jpg",
-  //   link: "https://www.smriti.live/",
-  //   tech: ["Next.js", "TypeScript", "Gemini API", "Supabase"],
-  //   category: "web",
-  //   featured: false,
-  // },
   {
     title: "JobSeek",
     description: "MERN job portal with role-based access.",
