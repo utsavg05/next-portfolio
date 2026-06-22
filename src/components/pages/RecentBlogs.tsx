@@ -17,7 +17,7 @@ export default function RecentBlogs() {
         </h2>
       </div>
 
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-8">
         {posts.map((post) => (
           <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
             <article className="flex flex-col gap-2">
@@ -57,7 +57,7 @@ export default function RecentBlogs() {
               </div>
 
               {post.tags.length > 0 && (
-                <div className="flex gap-x-2">
+                <div className="flex gap-x-2 mt-1">
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
