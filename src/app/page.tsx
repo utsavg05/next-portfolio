@@ -12,9 +12,9 @@ export default function Home() {
     <div id="/" className="flex flex-col items-center max-w-4xl mx-auto">
       <ScrollProgress className="top-0 " />
       <HeroSection />
+      <GitHubCalender />
       <SkillsSection />
       <ExperiencePage />
-      <GitHubCalender />
       <ProjetPage />
       <RecentBlogs />
       <ContactPage />

@@ -10,9 +10,9 @@ export default function RecentBlogs() {
   if (posts.length === 0) return null;
 
   return (
-    <section className="flex flex-col w-full max-w-4xl mx-auto mt-8 sm:mt-0 px-4 mb-4">
+    <section className="flex flex-col w-full max-w-4xl mx-auto py-6 px-4">
       <div className="mb-6">
-        <h2 className="text-3xl sm:text-3xl font-serif text-primary">
+        <h2 className="text-2xl sm:text-3xl font-serif text-primary">
           Most recent blogs
         </h2>
       </div>
@@ -57,11 +57,11 @@ export default function RecentBlogs() {
               </div>
 
               {post.tags.length > 0 && (
-                <div className="flex gap-x-2 mt-1">
+                <div className="flex flex-wrap gap-x-3 gap-y-1 mt-1">
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-bold text-white"
+                      className="text-xs font-bold text-white whitespace-nowrap"
                     >
                       #{tag}
                     </span>
