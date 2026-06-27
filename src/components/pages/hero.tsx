@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { motion, Variants } from "motion/react";
 import { FiMapPin, FiMail, FiUser, FiGlobe } from "react-icons/fi";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaMediumM } from "react-icons/fa";
+import { FaXTwitter, FaMedium } from "react-icons/fa6";
 import RotatingText from "@/components/RotatingText";
 
 const containerVariants = {
@@ -57,6 +57,7 @@ const socials = [
   { label: "LinkedIn", icon: FaLinkedin, href: "https://www.linkedin.com/in/utsav-gupta-3443a0324" },
   { label: "Website", icon: FiGlobe, href: "https://scribely.site" },
   { label: "Email", icon: FiMail, href: "mailto:work.utsavg21@gmail.com" },
+  { label: "Medium", icon: FaMedium, href: "https://medium.com/@utsavships" },
 ];
 
 const HeroSection = () => {
@@ -66,7 +67,7 @@ const HeroSection = () => {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="w-full max-w-4xl mx-auto flex flex-col px-6 md:px-4 py-8 md:py-10"
+      className="w-full max-w-4xl mx-auto flex flex-col px-6 md:px-4 py-8 md:py-10 mt-15"
     >
       {/* Name + Avatar */}
       <motion.div variants={fadeInBlur} className="flex items-center gap-4 md:gap-5">

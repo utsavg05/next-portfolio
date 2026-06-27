@@ -190,7 +190,7 @@ export default function RootLayout({
             <FloatingDockDemo />
             <DockDemo />
             {/* <SmoothScroll> */}
-              {children}
+              <main className="pt-16">{children}</main>
             {/* </SmoothScroll> */}
             {/* <Footer /> */}
           </ClickSpark>
