@@ -291,11 +291,11 @@ export default function ExperiencePage() {
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, margin: "-100px" }}
-      className="w-full py-13 px-4 bg-transparent text-foreground mb-3 max-w-4xl mx-auto"
+      className="w-full py-6 px-4 bg-transparent text-foreground max-w-4xl mx-auto"
     >
       <motion.h1 
         variants={itemVariants}
-        className="text-3xl sm:text-3xl font-serif text-primary mb-10 sm:mb-12"
+        className="text-2xl sm:text-3xl font-serif text-primary mb-10 sm:mb-12"
       >
         Work Experience
       </motion.h1>

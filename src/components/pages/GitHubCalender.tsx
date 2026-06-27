@@ -1,4 +1,6 @@
+"use client";
 import React from 'react'
+import { motion } from 'motion/react'
 import { GitHubCalendar } from 'react-github-calendar'
 
 const GitHubCalender = () => {
@@ -23,8 +25,16 @@ const GitHubCalender = () => {
   return (
     <section
       id="github"
-      className="w-full max-w-4xl mx-auto px-6 pt-2 pb-4 mb-21 md:mb-11"
+      className="w-full max-w-4xl mx-auto px-6 py-6"
     >
+      <motion.h2
+        initial={{ opacity: 0, x: -15 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        className="text-2xl sm:text-3xl font-serif tracking-tight text-primary mb-8"
+      >
+        GitHub Activity
+      </motion.h2>
       <GitHubCalendar username="utsavg05" theme={gitHubTheme} />
     </section>
   )

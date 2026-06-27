@@ -11,11 +11,11 @@ export default function ProjectPage() {
   return (
     <section
       id="projects"
-      className="bg-transparent flex flex-col w-full max-w-4xl mx-auto justify-center md:py-16 px-4"
+      className="bg-transparent flex flex-col w-full max-w-4xl mx-auto justify-center py-6 px-4"
     >
       <div className="max-w-4xl md:mx-0 mx-auto">
         <div className="mb-4">
-          <h2 className="text-3xl sm:text-3xl font-serif text-primary">
+          <h2 className="text-2xl sm:text-3xl font-serif text-primary">
             Featured Projects
           </h2>
         </div>
@@ -74,12 +74,14 @@ export default function ProjectPage() {
           ))}
         </div>
 
-        <div className="flex justify-center mt-10">
+        <div className="flex mt-8">
           <Link
             href="/projects"
-            className="group inline-flex items-center gap-2 bg-primary text-background font-medium text-sm px-6 py-2.5 rounded-lg hover:opacity-90 transition"
+            className="group inline-flex items-center gap-1.5 text-sm font-medium text-foreground hover:text-primary transition-colors"
           >
-            View all projects
+            <span className="underline decoration-dotted underline-offset-4 decoration-muted-foreground group-hover:decoration-primary transition-colors">
+              View all projects
+            </span>
             <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Link>
         </div>

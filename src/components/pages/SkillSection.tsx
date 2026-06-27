@@ -71,7 +71,7 @@ export default function SkillsSection() {
   return (
     <section 
       id="skills" 
-      className="w-full py-12 px-4 bg-transparent text-foreground mb-6 max-w-4xl mx-auto overflow-hidden"
+      className="w-full py-6 px-4 bg-transparent text-foreground max-w-4xl mx-auto overflow-hidden"
     >
       <div className="relative">
         
@@ -80,7 +80,7 @@ export default function SkillsSection() {
           <motion.h2 
             initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-3xl sm:text-3xl font-serif tracking-tight text-primary"
+            className="text-2xl sm:text-3xl font-serif tracking-tight text-primary"
           >
             Tools that I've used
           </motion.h2>
