@@ -88,7 +88,7 @@ const HeroSection = () => {
           <h1 className="text-primary text-3xl md:text-5xl font-bold tracking-tight">
             Utsav Gupta
           </h1>
-          <p className="text-muted-foreground text-base md:text-lg mt-0.5">
+          <p className="text-muted-foreground text-base md:text-base mt-0.5">
             Full-Stack Developer
           </p>
         </div>
