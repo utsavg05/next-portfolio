@@ -13,6 +13,7 @@ import DotGrid from "@/components/DotGrid";
 import Script from "next/script";
 import DotField from "@/components/DotField";
 import TopNav from "@/components/pages/TopNav";
+import { GridPattern } from "@/components/ui/grid-pattern";
 import Footer from "@/components/pages/Footer";
 import LightRays from "@/components/LightRays";
 import SideRays from "@/components/SideRays";
@@ -94,6 +95,12 @@ export default function RootLayout({
           maxPoints={10}
         /> */}
         <div className="fixed inset-0 -z-10">
+          <GridPattern
+            width={58}
+            height={58}
+            strokeWidth={0.5}
+            className="absolute inset-0 h-full w-full fill-none stroke-white/[0.05] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]"
+          />
           {/* <div
             className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
           />
