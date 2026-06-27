@@ -6,6 +6,7 @@ import { motion, Variants } from "motion/react";
 import { FiMapPin, FiMail, FiUser, FiGlobe } from "react-icons/fi";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import RotatingText from "@/components/RotatingText";
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -85,12 +86,22 @@ const HeroSection = () => {
         </motion.div>
 
         <div className="flex flex-col">
-          <h1 className="text-primary text-3xl md:text-5xl font-bold tracking-tight">
+          <h1 className="text-primary text-3xl md:text-5xl font-semibold tracking-tight">
             Utsav Gupta
           </h1>
-          <p className="text-muted-foreground text-base md:text-base mt-0.5">
-            Full-Stack Developer
-          </p>
+          <RotatingText
+            texts={["Full-Stack Developer", "App Developer", "Indie Hacker", "Solo Founder"]}
+            mainClassName="text-base md:text-base font-semibold mt-1.5 w-fit overflow-hidden"
+            splitLevelClassName="overflow-hidden pb-0.5"
+            elementLevelClassName="zinc-shine"
+            staggerFrom="last"
+            staggerDuration={0.02}
+            initial={{ y: "100%", opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: "-120%", opacity: 0 }}
+            transition={{ type: "spring", damping: 30, stiffness: 400 }}
+            rotationInterval={3000}
+          />
         </div>
       </motion.div>
 

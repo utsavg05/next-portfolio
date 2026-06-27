@@ -337,3 +337,27 @@ body {
   border: 1px solid oklch(0.275 0 0);
   margin: 1.5em 0;
 }
+
+/* Shiny shimmer text (rotating role) */
+.zinc-shine {
+  background-image: linear-gradient(
+    110deg,
+    #38bdf8 0%,
+    #818cf8 20%,
+    #ffffff 50%,
+    #818cf8 80%,
+    #38bdf8 100%
+  );
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  animation: zinc-shimmer 3s linear infinite;
+}
+
+@keyframes zinc-shimmer {
+  to {
+    background-position: -200% 0;
+  }
+}

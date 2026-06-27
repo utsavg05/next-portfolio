@@ -189,9 +189,9 @@ export default function RootLayout({
             <TopNav />
             <FloatingDockDemo />
             <DockDemo />
-            <SmoothScroll>
+            {/* <SmoothScroll> */}
               {children}
-            </SmoothScroll>
+            {/* </SmoothScroll> */}
             {/* <Footer /> */}
           </ClickSpark>
           <Analytics />
