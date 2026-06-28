@@ -1,32 +1,38 @@
 "use client";
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
-import { GitHubCalendar } from 'react-github-calendar'
+import { ActivityCalendar, type Activity } from 'react-activity-calendar'
+
+const USERNAME = 'utsavg05'
+
+const theme = {
+  light: ['#1e40af', '#2563eb', '#60a5fa', '#b6d4fe', '#eaf2ff'],
+  dark: ['#1B1B1B', '#333333', '#666666', '#999999', '#FFFFFF'],
+}
 
 const GitHubCalender = () => {
-  const gitHubTheme = {
-    // light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
-    // light: ['#ebedf0', '#d0d7de', '#8c959f', '#57606a', '#24292f'],
-    light: [
-      '#1e40af',
-      '#2563eb',
-      '#60a5fa',
-      '#b6d4fe',
-      '#eaf2ff',
-    ]
-    ,
+  const [data, setData] = useState<Activity[]>([])
+  const [loading, setLoading] = useState(true)
 
+  useEffect(() => {
+    let active = true
+    fetch(
+      `https://github-contributions-api.jogruber.de/v4/${USERNAME}?y=last&_=${Date.now()}`,
+      { cache: 'no-store' }
+    )
+      .then((res) => res.json())
+      .then((json) => {
+        if (active && json?.contributions) setData(json.contributions as Activity[])
+      })
+      .catch(() => {})
+      .finally(() => active && setLoading(false))
+    return () => {
+      active = false
+    }
+  }, [])
 
-    // dark: ['#161b22', '#0e4429', '#006d32', '#26a641', '#39d353'] // GitHub dark mode colors
-    dark: ['#1B1B1B', '#333333', '#666666', '#999999', '#FFFFFF'],
-    // dark: ['#1f1f1f', '#2b2b2b', '#5a5a5a', '#a3a3a3', '#ffffff',]
-
-  };
   return (
-    <section
-      id="github"
-      className="w-full max-w-4xl mx-auto px-6 py-6"
-    >
+    <section id="github" className="w-full max-w-4xl mx-auto px-6 py-6">
       <motion.h2
         initial={{ opacity: 0, x: -15 }}
         whileInView={{ opacity: 1, x: 0 }}
@@ -35,7 +41,17 @@ const GitHubCalender = () => {
       >
         GitHub Activity
       </motion.h2>
-      <GitHubCalendar username="utsavg05" theme={gitHubTheme} />
+
+      <ActivityCalendar
+        data={data}
+        loading={loading}
+        theme={theme}
+        colorScheme="dark"
+        blockSize={11}
+        blockMargin={4}
+        fontSize={13}
+        labels={{ totalCount: '{{count}} contributions in the last year' }}
+      />
     </section>
   )
 }
