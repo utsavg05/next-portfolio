@@ -6,15 +6,27 @@ import { format } from "date-fns";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog | Utsav Gupta",
+  title: "Blog",
   description:
-    "Thoughts on building products, indie hacking, and lessons learned along the way.",
+    "Thoughts on building products, indie hacking, and lessons learned along the way — by Utsav Gupta.",
+  alternates: {
+    canonical: "/blog",
+  },
   openGraph: {
     title: "Blog | Utsav Gupta",
     description:
       "Thoughts on building products, indie hacking, and lessons learned along the way.",
     url: "https://www.utsavworks.in/blog",
+    siteName: "Utsav Gupta",
     type: "website",
+    images: [{ url: "/og-image.png", width: 1307, height: 727 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Blog | Utsav Gupta",
+    description:
+      "Thoughts on building products, indie hacking, and lessons learned along the way.",
+    images: ["/og-image.png"],
   },
 };
 

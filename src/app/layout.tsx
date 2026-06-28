@@ -29,26 +29,71 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
+const siteUrl = "https://www.utsavworks.in";
+
 export const metadata: Metadata = {
-  title: "utsavworks.in",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "Utsav Gupta | Full Stack Developer",
+    template: "%s | Utsav Gupta",
+  },
   description:
-    "Explore the professional portfolio of Utsav, featuring innovative digital solutions, web development projects, and creative design work.",
+    "Utsav Gupta is a full stack developer based in India specializing in building SaaS, web apps, mobile apps, AI agents and automations.",
+  keywords: [
+    "Utsav Gupta",
+    "Full Stack Developer",
+    "Web Developer",
+    "Next.js Developer",
+    "React Developer",
+    "TypeScript",
+    "React Native Developer",
+    "Frontend Developer",
+    "Software Engineer",
+    "SaaS Developer",
+    "AI Agents",
+    "Automation",
+    "Full Stack Developer India",
+    "Portfolio",
+  ],
+  authors: [{ name: "Utsav Gupta", url: siteUrl }],
+  creator: "Utsav Gupta",
+  publisher: "Utsav Gupta",
+  applicationName: "Utsav Gupta Portfolio",
+  category: "technology",
+
+  alternates: {
+    canonical: "/",
+  },
+
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
 
   verification: {
     google: "HoSogLRKyeKm49rn6z6HAumT6zhV4euFd0yxOm6ZruU",
   },
 
   openGraph: {
-    title: "UtsavWorks - Creative Portfolio & Digital Solutions",
+    title: "Utsav Gupta | Full Stack Developer",
     description:
-      "Showcasing high-quality web development and creative projects. Let's build something exceptional together.",
-    url: "https://www.utsavworks.in",
-    siteName: "UtsavWorks",
+      "Utsav Gupta is a Full-Stack Developer based in India specializing in building SaaS, web apps, mobile apps, AI agents and automations.",
+    url: siteUrl,
+    siteName: "Utsav Gupta",
+    locale: "en_US",
     images: [
       {
-        url: "https://www.utsavworks.in/og-image.png",
+        url: "/og-image.png",
         width: 1307,
         height: 727,
+        alt: "Utsav Gupta — Full Stack Developer",
       },
     ],
     type: "website",
@@ -56,11 +101,37 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "UtsavWorks - Creative Portfolio & Digital Solutions",
+    title: "Utsav Gupta | Full Stack Developer",
     description:
-      "Explore a collection of digital excellence and creative development projects at UtsavWorks.",
-    images: ["https://www.utsavworks.in/og-image.png"],
+      "Utsav Gupta is a Full-Stack Developer based in India specializing in building SaaS, web apps, mobile apps, AI agents and automations.",
+    creator: "@0xdevug",
+    images: ["/og-image.png"],
   },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Utsav Gupta",
+  url: siteUrl,
+  image: `${siteUrl}/pp.jpg`,
+  jobTitle: "Full Stack Developer",
+  description:
+    "Utsav Gupta is a full stack developer based in India specializing in building SaaS, web apps, mobile apps, AI agents and automations.",
+  sameAs: [
+    "https://github.com/utsavg05",
+    "https://www.linkedin.com/in/utsav-gupta-3443a0324e",
+    "https://x.com/0xdevug",
+  ],
+  knowsAbout: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "Node.js",
+    "React Native",
+    "Web Development",
+    "Full Stack Development",
+  ],
 };
 
 export default function RootLayout({
@@ -70,6 +141,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <Script
+        id="person-jsonld"
+        type="application/ld+json"
+        strategy="beforeInteractive"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* <!-- Google tag (gtag.js) --> */}
       <Script async src="https://www.googletagmanager.com/gtag/js?id=G-2ZKXXR7QD2"></Script>
       <Script>

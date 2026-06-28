@@ -20,14 +20,27 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return {
-    title: `${post.title} | Utsav Gupta`,
+    title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
+      url: `https://www.utsavworks.in/blog/${slug}`,
+      siteName: "Utsav Gupta",
       type: "article",
       publishedTime: post.date,
-      ...(post.image && { images: [post.image] }),
+      authors: ["Utsav Gupta"],
+      images: post.image ? [post.image] : ["/og-image.png"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      creator: "@0xdevug",
+      images: post.image ? [post.image] : ["/og-image.png"],
     },
   };
 }
