@@ -11,7 +11,7 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Scribely (640+ users)",
+    title: "Scribely (650+ users)",
     description:
       "All-in-one AI study toolkit for students and learners. It turns your YouTube lectures, long PDFs, or any study content into handwritten notes, flashcards, quizzes, cheat sheets and more in seconds.",
     image: "/scribely-2k.png",
