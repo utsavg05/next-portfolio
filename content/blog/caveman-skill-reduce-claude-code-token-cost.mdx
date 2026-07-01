@@ -1,0 +1,201 @@
+---
+title: "Caveman Skill: Reduce Claude Code Token Usage by ~75% (Free & Open Source)"
+date: "2026-07-01"
+updatedAt: "2026-07-01"
+author: "Utsav Gupta"
+description: "Caveman is a free, open-source Claude Code plugin that reduces output tokens by ~75% with no loss of accuracy. Install, intensity levels & /caveman-stats explained."
+image: "/blogs/caveman.png"
+tags:
+  - claude-code
+  - reduce-token-usage
+  - ai-coding-tools
+  - llm-cost-optimization
+  - claude-code-plugins
+  - open-source
+  - productivity
+---
+
+Want to **reduce Claude Code token usage** without giving up answer quality? The single easiest win is a free, open-source plugin called **caveman**. It strips the filler out of every AI response and keeps 100% of the technical substance, cutting output tokens by roughly 75%.
+
+If you use Claude Code every day, you have probably watched your token usage climb and wondered how much of it is actual signal. The answer is: not that much. A huge chunk of every AI response is politeness, hedging, and filler ("Sure! I'd be happy to help you with that. The issue you're experiencing is most likely caused by...") — words that cost tokens but carry zero technical value.
+
+The **caveman skill** deletes all of that. It is a free, open-source plugin for Claude Code (and 30+ other AI agents) that makes the model talk like a smart caveman: terse, fragmented, and stripped of fluff, while keeping every piece of technical substance intact. The tagline says it all: **"why use many token when few do trick."**
+
+This post covers what it is, how it works, how to install it with the plugin marketplace commands, the different intensity levels, and how to check your real savings with `/caveman-stats`.
+
+## What Is the Caveman Skill?
+
+Caveman is a Claude Code **skill/plugin** that changes *how* the AI writes its answers, not *what* it knows. The brain stays the same size. Only the mouth shrinks.
+
+Here is the exact same technical answer, before and after:
+
+**Normal Claude (69 tokens):**
+
+> "The reason your React component is re-rendering is likely because you're creating a new object reference on each render cycle. When you pass an inline object as a prop, React's shallow comparison sees it as a different object every time, which triggers a re-render. I'd recommend using useMemo to memoize the object."
+
+**Caveman Claude (19 tokens):**
+
+> "New object ref each render. Inline object prop = new ref = re-render. Wrap in `useMemo`."
+
+Same fix. Same correctness. ~75% fewer tokens. The diagnosis, the cause, and the solution are all still there. The plugin only removed the words that were doing no work.
+
+### What it drops
+
+- **Articles:** a, an, the
+- **Filler:** just, really, basically, actually, simply
+- **Pleasantries:** sure, certainly, of course, happy to help
+- **Hedging:** "it's likely that," "you might want to consider"
+
+### What it never touches
+
+This is the important part, and the reason caveman is actually usable for real engineering work:
+
+- **Code blocks** stay completely unchanged
+- **Function names, API names, CLI commands** are kept verbatim
+- **Error strings** are quoted exactly
+- **Technical terms** stay precise (it says "big" instead of "extensive," but never mangles a real symbol)
+
+It also has an **auto-clarity** rule: it automatically drops caveman mode for security warnings, irreversible action confirmations, and multi-step sequences where terse fragments could be misread. Commit messages, PRs, and code are always written in normal English. So you get the token savings on the chatter, but full clarity where clarity actually matters.
+
+## It's Open Source and Free
+
+Caveman is MIT-licensed and built by [Julius Brussee](https://github.com/JuliusBrussee). The whole thing lives on GitHub at [github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman), so you can read every hook, every rule file, and the install script before you run anything.
+
+There is no API key, no subscription, and no telemetry. The installer makes no network calls of its own; it only shells out to your agent's native install command (which fetches from the official registry). It writes to your local Claude config directory and nowhere else.
+
+## How to Install It in Claude Code
+
+The cleanest way to install caveman for Claude Code is through the **plugin marketplace** commands. Two lines:
+
+```bash
+claude plugin marketplace add JuliusBrussee/caveman
+claude plugin install caveman@caveman
+```
+
+The first command registers the caveman marketplace (pointing at the GitHub repo). The second installs the `caveman` plugin from that `caveman` marketplace. That is where the `caveman@caveman` syntax comes from: it reads as `plugin@marketplace`.
+
+Once installed, it **auto-activates on session start**. A `SessionStart` hook flips caveman mode on, and a `UserPromptSubmit` hook keeps it tracked across turns. You do not have to do anything per-message.
+
+### Turning it on and off
+
+- Type `/caveman` (or say "talk like caveman") to trigger it
+- Say **"normal mode"** or **"stop caveman"** to revert to full English
+- Switch intensity with `/caveman lite`, `/caveman full`, or `/caveman ultra`
+
+### The one-line installer (all agents at once)
+
+If you use more than one AI agent, there is a single installer that auto-detects every supported agent on your machine and wires each one up:
+
+```bash
+# macOS / Linux / WSL / Git Bash
+curl -fsSL https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.sh | bash
+
+# Windows (PowerShell 5.1+)
+irm https://raw.githubusercontent.com/JuliusBrussee/caveman/main/install.ps1 | iex
+```
+
+It takes about 30 seconds, needs Node 18 or newer, skips any agent you don't have, and is safe to re-run. If you would rather read the script before piping it into a shell, download it first and inspect it. The installer verifies its hook files against a committed SHA-256 manifest before writing anything.
+
+> **Windows note:** use `install.ps1`, not `install.sh`. Git Bash works for the shell version, but the Windows hooks (including the statusline badge) are wired as PowerShell scripts. If `irm | iex` gets blocked by execution policy, run `Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass` for the session and re-run.
+
+## Pick Your Level of Grunt
+
+Caveman ships with several intensity levels, so you can dial in exactly how terse you want it:
+
+- **lite:** Drops filler and hedging but keeps articles and full sentences. Professional, just tight.
+- **full** (default): Drops articles, allows fragments, uses short synonyms. Classic caveman.
+- **ultra:** Abbreviates prose words (DB, auth, config, req/res, fn, impl), strips conjunctions, uses arrows for causality (X → Y). Never abbreviates real code symbols.
+- **wenyan-lite / full / ultra:** Classical Chinese (文言文) register. Even shorter, up to 80-90% character reduction.
+
+One question, three levels:
+
+**"Why does my React component re-render?"**
+
+- **lite:** "Your component re-renders because you create a new object reference each render. Wrap it in `useMemo`."
+- **full:** "New object ref each render. Inline object prop = new ref = re-render. Wrap in `useMemo`."
+- **ultra:** "Inline obj prop → new ref → re-render. `useMemo`."
+
+Crucially, caveman also **keeps your language**. Write to it in Portuguese and it grunts back in Portuguese caveman; Spanish, French, same deal. It compresses the *style*, not the language, and code, commands, and error strings always stay exact.
+
+## How to Check Your Caveman Stats
+
+This is the part I like most: the savings are not guesswork. Caveman ships a `/caveman-stats` command that reads **directly from your Claude Code session log** and reports real token usage and estimated savings for the current session.
+
+```bash
+/caveman-stats
+```
+
+Important detail: the model does not compute these numbers (an AI estimating its own savings would be meaningless). The figure is produced by a hook. `caveman-mode-tracker.js` reads the session log via `caveman-stats.js` and injects the formatted result directly. What you see is measured, not vibes.
+
+### The statusline badge
+
+Caveman can also show a live badge at the bottom of Claude Code: `[CAVEMAN]` in orange, or `[CAVEMAN:ULTRA]` when you bump the level. After your first `/caveman-stats` run, the badge appends a running savings counter that looks like `[CAVEMAN] ⛏ 12.4k` (tokens saved).
+
+On a fresh install the statusline isn't wired up automatically on every platform. On Windows you enable it by adding a `statusLine` entry to `~/.claude/settings.json` pointing at the bundled `caveman-statusline.ps1` script, or just let the installer's `--with-hooks` path (on by default) do it for you.
+
+### Verifying the install worked
+
+Three quick checks after installing:
+
+1. Run `claude plugin` / the installer's `--list` and confirm `claude` shows up as a detected agent.
+2. Check the flag file. It should contain the word `full`:
+   ```bash
+   cat "${CLAUDE_CONFIG_DIR:-$HOME/.claude}/.caveman-active"
+   # expected: full
+   ```
+3. Ask Claude Code a real question like "What are closures in JS?" and the answer should come back as terse, article-free fragments.
+
+If the flag file is missing, the `SessionStart` hook didn't fire. Restart Claude Code, since that hook only runs at session start, not mid-session.
+
+## Why This Actually Matters
+
+The obvious win is cost: fewer output tokens means a smaller bill, and on a metered plan that compounds over every single session, forever. But there are two subtler wins.
+
+**Speed.** Fewer tokens to generate means responses land faster. The project claims roughly 3× faster output in practice. Less waiting for the model to type out "I'd be happy to help you with that."
+
+**Context longevity.** Every token the model *doesn't* spend on filler is a token that stays available in your context window. In long debugging sessions, that means you hit the summarization wall later and keep more of your actual work in context.
+
+There is even a companion project, [caveman-code](https://github.com/JuliusBrussee/caveman-code), that applies the same philosophy to an entire terminal coding agent, not just the responses. But for most people, the skill is the sweet spot: install two commands, get ~75% smaller responses, lose nothing technical.
+
+If you want to see how far Claude Code can go once you have it dialed in, I wrote a full breakdown of [how I used Claude Code to build a complete SEO strategy for free](/blog/how-i-used-claude-to-build-seo-strategy-for-free). Caveman just makes that same workflow cheaper to run.
+
+## Frequently Asked Questions
+
+### Does the caveman skill make Claude Code less accurate?
+
+No. Caveman only removes filler, articles, pleasantries, and hedging. Code blocks, function names, API names, CLI commands, and error strings are kept verbatim. The diagnosis and the fix are identical to a normal response; there are just fewer words around them.
+
+### Is the caveman plugin free?
+
+Yes. It is MIT-licensed and fully open source at [github.com/JuliusBrussee/caveman](https://github.com/JuliusBrussee/caveman). There is no API key, no subscription, and no telemetry.
+
+### How much does caveman actually save on tokens?
+
+The project measures roughly 75% fewer output tokens on typical responses while keeping full technical accuracy. Because it only trims your output tokens, the exact percentage depends on how chatty your normal responses are. You can check your own real numbers with `/caveman-stats`, which reads directly from the Claude Code session log.
+
+### How do I install the caveman plugin in Claude Code?
+
+Run two commands: `claude plugin marketplace add JuliusBrussee/caveman` to register the marketplace, then `claude plugin install caveman@caveman` to install the plugin. It auto-activates on session start.
+
+### Does caveman work with other AI coding tools besides Claude Code?
+
+Yes. It also supports Codex, Gemini CLI, Cursor, Windsurf, Cline, GitHub Copilot, and 30+ other agents. A single one-line installer auto-detects every supported agent on your machine and wires each one up.
+
+### How do I turn off caveman mode?
+
+Say "normal mode" or "stop caveman" to revert to full English for the rest of the session. You can also switch intensity on the fly with `/caveman lite`, `/caveman full`, or `/caveman ultra`.
+
+## The Bottom Line
+
+The caveman skill is one of those rare tools where the trade-off is almost free. You install it, your AI stops wasting tokens on pleasantries, and the actual engineering content (the code, the commands, the error messages, the diagnosis) comes through completely intact. It's open source, it's MIT-licensed, and you can audit every line before you run it.
+
+Two commands to try it:
+
+```bash
+claude plugin marketplace add JuliusBrussee/caveman
+claude plugin install caveman@caveman
+```
+
+Then type `/caveman`, do some real work, and run `/caveman-stats` to see exactly how many tokens you just stopped burning.
+
+Brain still big. Mouth small.

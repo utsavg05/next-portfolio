@@ -32,6 +32,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Utsav Gupta",
       type: "article",
       publishedTime: post.date,
+      modifiedTime: post.updatedAt ?? post.date,
       authors: ["Utsav Gupta"],
       images: post.image ? [post.image] : ["/og-image.png"],
     },
@@ -51,8 +52,36 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: post.title,
+    description: post.description,
+    image: `https://www.utsavworks.in${post.image ?? "/og-image.png"}`,
+    datePublished: post.date,
+    dateModified: post.updatedAt ?? post.date,
+    author: {
+      "@type": "Person",
+      name: "Utsav Gupta",
+      url: "https://www.utsavworks.in",
+    },
+    publisher: {
+      "@type": "Person",
+      name: "Utsav Gupta",
+    },
+    keywords: post.tags.join(", "),
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://www.utsavworks.in/blog/${slug}`,
+    },
+  };
+
   return (
     <div className="flex flex-col w-full max-w-4xl mx-auto px-4 py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <Link
         href="/blog"
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors mb-10 w-fit"
