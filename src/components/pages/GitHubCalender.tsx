@@ -1,18 +1,23 @@
 "use client";
 import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
+import { useTheme } from 'next-themes'
 import { ActivityCalendar, type Activity } from 'react-activity-calendar'
 
 const USERNAME = 'utsavg05'
 
 const theme = {
-  light: ['#1e40af', '#2563eb', '#60a5fa', '#b6d4fe', '#eaf2ff'],
+  light: ['#ebedf0', '#c2c2c2', '#8f8f8f', '#4d4d4d', '#1a1a1a'],
   dark: ['#1B1B1B', '#333333', '#666666', '#999999', '#FFFFFF'],
 }
 
 const GitHubCalender = () => {
   const [data, setData] = useState<Activity[]>([])
   const [loading, setLoading] = useState(true)
+  const [mounted, setMounted] = useState(false)
+  const { resolvedTheme } = useTheme()
+
+  useEffect(() => setMounted(true), [])
 
   useEffect(() => {
     let active = true
@@ -46,7 +51,7 @@ const GitHubCalender = () => {
         data={data}
         loading={loading}
         theme={theme}
-        colorScheme="dark"
+        colorScheme={mounted && resolvedTheme === 'light' ? 'light' : 'dark'}
         blockSize={11}
         blockMargin={4}
         fontSize={13}

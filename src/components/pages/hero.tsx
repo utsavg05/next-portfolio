@@ -92,7 +92,7 @@ const HeroSection = () => {
           </h1>
           <RotatingText
             texts={["Full-Stack Developer", "App Developer", "Indie Hacker", "Solo Founder"]}
-            mainClassName="text-base md:text-base font-semibold mt-1.5 w-fit overflow-hidden"
+            mainClassName="text-base ml-1 md:text-base font-semibold mt-1.5 w-fit overflow-hidden"
             splitLevelClassName="overflow-hidden pb-0.5"
             elementLevelClassName="zinc-shine"
             staggerFrom="last"

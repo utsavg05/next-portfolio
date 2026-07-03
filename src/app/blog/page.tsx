@@ -59,7 +59,7 @@ export default function BlogPage() {
             <Link key={post.slug} href={`/blog/${post.slug}`} className="group">
               <article className="flex flex-col gap-3">
                 {post.image && (
-                  <div className="w-full aspect-[16/9] relative rounded-lg overflow-hidden border border-white/10 bg-black/20">
+                  <div className="w-full aspect-[16/9] relative rounded-lg overflow-hidden border border-black/10 dark:border-white/10 bg-black/5 dark:bg-black/20">
                     <Image
                       src={post.image}
                       alt={post.title}
@@ -94,7 +94,7 @@ export default function BlogPage() {
                     {post.tags.map((tag) => (
                       <span
                         key={tag}
-                        className={`text-sm font-bold text-white}`}
+                        className="font-mono text-sm font-medium tracking-tight text-muted-foreground"
                       >
                         #{tag}
                       </span>

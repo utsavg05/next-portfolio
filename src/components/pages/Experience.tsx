@@ -128,9 +128,9 @@ export default function ExperiencePage() {
                 rounded-lg
                 p-4 sm:p-6
                 backdrop-blur-xl
-                bg-white/[0.03]
+                bg-black/[0.03]
                 dark:bg-white/[0.01]
-                border border-white/10
+                border border-black/10 dark:border-white/10
                 transition-colors duration-300
                 flex flex-col
                 group

@@ -28,7 +28,7 @@ const cardVariants: Variants = {
 function ProjectCard({ project }: { project: Project }) {
   return (
     <div className="flex flex-col gap-4 ">
-      <div className="w-full aspect-[16/10] relative rounded-sm overflow-hidden border border-white/10">
+      <div className="w-full aspect-[16/10] relative rounded-sm overflow-hidden border border-black/10 dark:border-white/10">
         <Image
           src={project.image}
           alt={project.title}
