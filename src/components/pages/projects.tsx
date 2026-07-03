@@ -23,7 +23,7 @@ export default function ProjectPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8 sm:gap-y-4 w-full mx-0">
           {featuredProjects.map((project, index) => (
             <div key={index} className="flex flex-col gap-4 py-4">
-              <div className="w-full aspect-[16/10] relative rounded-lg overflow-hidden border border-white/10">
+              <div className="w-full aspect-[16/10] relative rounded-lg overflow-hidden border border-black/10 dark:border-white/10">
                 <Image
                   src={project.image}
                   alt={project.title}

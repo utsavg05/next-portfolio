@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import logo from "@/app/icon.png";
+import { ThemeToggle } from "@/components/ui/theme-toggle";
 
 const links = [
   { href: "/", label: "About" },
@@ -16,7 +17,7 @@ export default function TopNav() {
   const pathname = usePathname();
 
   return (
-    <nav className="fixed top-0 inset-x-0 z-50 bg-[#0A0A0A] ">
+    <nav className="fixed top-0 inset-x-0 z-50 bg-background border-b border-transparent dark:border-transparent">
       <div className="w-full max-w-4xl mx-auto px-6 py-5 flex items-center justify-between">
         {/* Logo / Home */}
         <Link href="/" aria-label="Home" className="flex items-center">
@@ -45,14 +46,15 @@ export default function TopNav() {
                 className={cn(
                   "text-sm md:text-base font-medium transition-colors pb-0.5",
                   isActive
-                    ? "text-white border-b-3 rounded-l-xs rounded-r-xs border-foreground"
-                    : "text-white/80 hover:text-white"
+                    ? "text-foreground border-b-3 rounded-l-xs rounded-r-xs border-foreground"
+                    : "text-foreground/70 hover:text-foreground"
                 )}
               >
                 {link.label}
               </Link>
             );
           })}
+          <ThemeToggle />
         </div>
       </div>
     </nav>

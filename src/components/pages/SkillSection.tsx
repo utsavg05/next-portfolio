@@ -23,7 +23,7 @@ import { FaAws } from "react-icons/fa6";
 
 const skills = [
   { name: "React", icon: <FaReact className="text-sky-400" /> },
-  { name: "Next.js", icon: <SiNextdotjs className="text-white" /> },
+  { name: "Next.js", icon: <SiNextdotjs className="dark:text-white text-black" /> },
   { name: "Tailwind CSS", icon: <SiTailwindcss className="text-sky-300" /> },
   { name: "TypeScript", icon: <SiTypescript className="text-blue-500" /> },
   { name: "JavaScript", icon: <SiJavascript className="text-yellow-400" /> },
@@ -34,7 +34,7 @@ const skills = [
   { name: "Express.js", icon: <SiExpress className="text-gray-300" /> },
   { name: "MongoDB", icon: <SiMongodb className="text-green-400" /> },
   { name: "Framer Motion", icon: <SiFramer className="text-pink-400" /> },
-  { name: "ShadCN UI", icon: <SiShadcnui className="text-white" /> },
+  { name: "ShadCN UI", icon: <SiShadcnui className="dark:text-white text-black" /> },
   { name: "Java", icon: <FaJava className="text-red-500" /> },
   { name: "PostgreSQL", icon: <SiPostgresql className="text-blue-400" /> },
   { name: "Git", icon: <FaGitAlt className="text-orange-500" /> },
@@ -126,8 +126,8 @@ export default function SkillsSection() {
               }}
               className="
                 flex items-center gap-2 px-3 py-1.5 
-                bg-white/[0.03] dark:bg-white/[0.01]
-                border border-dashed border-white/30 
+                bg-black/[0.03] dark:bg-white/[0.01]
+                border border-dashed border-black/20 dark:border-white/30
                 rounded-lg
                 cursor-grab active:cursor-grabbing
                 transition-colors duration-200

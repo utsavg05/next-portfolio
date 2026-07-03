@@ -61,7 +61,7 @@ export default function RecentBlogs() {
                   {post.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="text-xs font-bold text-white whitespace-nowrap"
+                      className="font-mono text-xs font-medium tracking-tight text-muted-foreground whitespace-nowrap"
                     >
                       #{tag}
                     </span>
