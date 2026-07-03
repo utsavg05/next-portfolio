@@ -140,7 +140,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" suppressHydrationWarning>
       <Script
         id="person-jsonld"
         type="application/ld+json"
@@ -161,6 +161,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}
       >
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="dark"
+          enableSystem={false}
+          disableTransitionOnChange
+        >
         {/* <TextCursor
           // text="⚛️"
           text="🛩️"
@@ -176,7 +182,7 @@ export default function RootLayout({
             width={58}
             height={58}
             strokeWidth={0.5}
-            className="absolute inset-0 h-full w-full fill-none stroke-white/[0.05] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]"
+            className="absolute inset-0 h-full w-full fill-none stroke-black/[0.06] dark:stroke-white/[0.05] [mask-image:radial-gradient(ellipse_at_center,white,transparent_80%)]"
           />
           {/* <div
             className="absolute inset-0 [background-size:40px_40px] [background-image:linear-gradient(to_right,#e4e4e7_1px,transparent_1px),linear-gradient(to_bottom,#e4e4e7_1px,transparent_1px)] dark:[background-image:linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)]"
@@ -279,8 +285,8 @@ export default function RootLayout({
             {/* <Footer /> */}
           </ClickSpark>
           <Analytics />
-          {/* </ThemeProvider> */}
         </div>
+        </ThemeProvider>
       </body>
     </html>
   );
