@@ -21,6 +21,15 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Codemon",
+    description: "A pixel companion that lives on your desktop and watches your AI agents so you don't have to.",
+    image: "/codemon-2.png",
+    link: "https://www.codemon.pro",
+    tech: ["Electron", "Claude"],
+    category: "web",
+    featured: true,
+  },
+  {
     title: "SnipHub",
     description:
       "A platform to share, explore, and manage code snippets with ease.",
@@ -48,7 +57,7 @@ export const projects: Project[] = [
     link: "https://zync-three.vercel.app",
     tech: ["MongoDB", "Express", "React", "Node.js"],
     category: "web",
-    featured: true,
+    featured: false,
   },
   {
     title: "JobSeek",
