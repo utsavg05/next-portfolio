@@ -161,12 +161,12 @@ const HeroSection = () => {
         <span>Currently building</span>
         <span className="text-muted-foreground/40">—</span>
         <Link
-          href="https://scribely.site"
+          href="https://www.codemon.pro"
           target="_blank"
           rel="noopener noreferrer"
           className="text-foreground hover:text-primary transition-colors"
         >
-          Scribely
+          Codemon
         </Link>
       </motion.div>
 
