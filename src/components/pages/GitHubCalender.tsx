@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import { useTheme } from 'next-themes'
 import { ActivityCalendar, type Activity } from 'react-activity-calendar'
+import { GitHubActivity } from '../ui/github-activity';
 
 const USERNAME = 'utsavg05'
 
@@ -57,6 +58,7 @@ const GitHubCalender = () => {
         fontSize={13}
         labels={{ totalCount: '{{count}} contributions in the last year' }}
       />
+     {/* <GitHubActivity username="utsavg05" /> */}
     </section>
   )
 }
