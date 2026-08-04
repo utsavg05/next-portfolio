@@ -10,7 +10,7 @@ export default function ContactPage() {
             className="bg-transparent flex flex-col items-center justify-center pt-12 px-4 pb-30 md:pb-30"
         >
             <div className="max-w-xl text-center space-y-7">
-                <h2 className="text-4xl sm:text-6xl font-serif text-primary">Get in Touch</h2>
+                <h2 className="text-4xl sm:text-6xl font-geist-sans text-primary">Get in Touch</h2>
 
                 <p className="text-muted-foreground text-2xl leading-relaxed flex flex-wrap items-center justify-center gap-2">
                     Want to chat? Shoot me a mail on
@@ -50,3 +50,4 @@ export default function ContactPage() {
         </section>
     );
 }
+

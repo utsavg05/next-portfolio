@@ -368,6 +368,9 @@ body {
   );
 }
 
+.font-geist-sans {
+  font-family: var(--font-geist-sans);
+}
 @keyframes zinc-shimmer {
   to {
     background-position: -200% 0;

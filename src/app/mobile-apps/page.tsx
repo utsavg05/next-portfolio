@@ -66,7 +66,7 @@ export default function MobileShowcase() {
           <Smartphone className="text-primary w-8 h-8" />
           <motion.h2 
             variants={cardRevealVariants}
-            className="text-3xl sm:text-4xl font-serif text-primary tracking-tight"
+            className="text-3xl sm:text-4xl font-geist-sans text-primary tracking-tight"
           >
             Mobile Experiences
           </motion.h2>
@@ -279,7 +279,7 @@ export default function MobileShowcase() {
 //         {/* Section Header */}
 //         <div className="flex items-center gap-3 mb-12">
 //           <Smartphone className="text-primary w-8 h-8" />
-//           <h2 className="text-3xl sm:text-4xl font-serif text-primary tracking-tight">
+//           <h2 className="text-3xl sm:text-4xl font-geist-sans text-primary tracking-tight">
 //             Mobile Experiences
 //           </h2>
 //         </div>

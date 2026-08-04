@@ -90,7 +90,7 @@ export default function ProjectsPage() {
         Back home
       </Link> */}
 
-      <h1 className="text-4xl sm:text-4xl font-serif text-primary mb-4">
+      <h1 className="text-4xl sm:text-4xl font-geist-sans text-primary mb-4">
         All Projects
       </h1>
       <p className="text-muted-foreground mb-12 max-w-lg">
@@ -108,7 +108,7 @@ export default function ProjectsPage() {
       >
         <div className="flex items-center gap-2 mb-6">
           <Globe className="h-5 w-5 text-primary" />
-          <h2 className="text-2xl font-serif text-primary">Web Apps</h2>
+          <h2 className="text-2xl font-geist-sans text-primary">Web Apps</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 w-full">
@@ -131,7 +131,7 @@ export default function ProjectsPage() {
       >
         <div className="flex items-center gap-2 mb-6">
           <Smartphone className="h-5 w-5 text-primary" />
-          <h2 className="text-2xl font-serif text-primary">Mobile Apps</h2>
+          <h2 className="text-2xl font-geist-sans text-primary">Mobile Apps</h2>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 w-full">
@@ -145,3 +145,5 @@ export default function ProjectsPage() {
     </div>
   );
 }
+
+

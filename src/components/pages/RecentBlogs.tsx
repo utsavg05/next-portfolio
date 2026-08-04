@@ -12,7 +12,7 @@ export default function RecentBlogs() {
   return (
     <section className="flex flex-col w-full max-w-4xl mx-auto py-6 px-4">
       <div className="mb-6">
-        <h2 className="text-2xl sm:text-3xl font-serif text-primary">
+        <h2 className="text-2xl sm:text-3xl font-geist-sans text-primary">
           Most recent blogs
         </h2>
       </div>
@@ -75,3 +75,4 @@ export default function RecentBlogs() {
     </section>
   );
 }
+

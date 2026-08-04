@@ -43,7 +43,7 @@ const GitHubCalender = () => {
         initial={{ opacity: 0, x: -15 }}
         whileInView={{ opacity: 1, x: 0 }}
         viewport={{ once: true }}
-        className="text-2xl sm:text-3xl font-serif tracking-tight text-primary mb-8"
+        className="text-2xl sm:text-3xl font-geist-sans tracking-tight text-primary mb-8"
       >
         GitHub Activity
       </motion.h2>
@@ -64,3 +64,4 @@ const GitHubCalender = () => {
 }
 
 export default GitHubCalender
+

@@ -15,7 +15,7 @@ export default function ProjectPage() {
     >
       <div className="max-w-4xl md:mx-0 mx-auto">
         <div className="mb-4">
-          <h2 className="text-2xl sm:text-3xl font-serif text-primary">
+          <h2 className="text-2xl sm:text-3xl font-geist-sans text-primary">
             Featured Projects
           </h2>
         </div>
@@ -90,3 +90,4 @@ export default function ProjectPage() {
     </section>
   );
 }
+

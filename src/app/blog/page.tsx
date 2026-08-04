@@ -43,7 +43,7 @@ export default function BlogPage() {
         Back home
       </Link> */}
 
-      <h1 className="text-4xl sm:text-5xl font-serif text-primary mb-4">
+      <h1 className="text-4xl sm:text-5xl font-geist-sans text-primary mb-4">
         Blog
       </h1>
       <p className="text-muted-foreground mb-12 max-w-lg">
@@ -70,7 +70,7 @@ export default function BlogPage() {
                   </div>
                 )}
 
-                <h2 className="text-lg sm:text-xl font-serif text-foreground group-hover:text-primary transition-colors leading-tight">
+                <h2 className="text-lg sm:text-xl font-geist-sans text-foreground group-hover:text-primary transition-colors leading-tight">
                   {post.title}
                 </h2>
 
@@ -109,3 +109,5 @@ export default function BlogPage() {
     </div>
   );
 }
+
+

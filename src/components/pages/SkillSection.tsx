@@ -80,7 +80,7 @@ export default function SkillsSection() {
           <motion.h2 
             initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-2xl sm:text-3xl font-serif tracking-tight text-primary"
+            className="text-2xl sm:text-3xl font-geist-sans tracking-tight text-primary"
           >
             Tools that I've used
           </motion.h2>

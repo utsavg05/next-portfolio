@@ -91,7 +91,7 @@ export default async function BlogPostPage({ params }: Props) {
       </Link>
 
       <header className="mb-10">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-serif text-primary leading-tight mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-geist-sans text-primary leading-tight mb-4">
           {post.title}
         </h1>
 

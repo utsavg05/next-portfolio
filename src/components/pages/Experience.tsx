@@ -84,7 +84,7 @@ export default function ExperiencePage() {
     >
       <motion.h1 
         variants={itemVariants}
-        className="text-2xl sm:text-3xl font-serif text-primary mb-10 sm:mb-12"
+        className="text-2xl sm:text-3xl font-geist-sans text-primary mb-10 sm:mb-12"
       >
         Work Experience
       </motion.h1>
