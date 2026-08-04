@@ -87,7 +87,10 @@ const HeroSection = () => {
         </motion.div>
 
         <div className="flex flex-col">
-          <h1 className="text-primary text-3xl md:text-5xl font-semibold tracking-tight">
+          <h1
+            className="text-primary text-3xl md:text-5xl font-semibold tracking-tight"
+            style={{ fontFamily: "var(--font-geist-sans)" }}
+          >
             Utsav Gupta
           </h1>
           <RotatingText
@@ -202,3 +205,6 @@ const HeroSection = () => {
 };
 
 export default HeroSection;
+
+
+
