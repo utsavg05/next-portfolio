@@ -74,12 +74,13 @@ const HeroSection = () => {
         <motion.div
           whileHover={{ scale: 1.04 }}
           transition={{ duration: 0.3 }}
-          className="w-16 h-16 md:w-20 md:h-20 flex-shrink-0 overflow-hidden rounded-xl border border-border"
+          className="w-16 h-16 md:w-26 md:h-26 flex-shrink-0 overflow-hidden rounded-xl border border-border"
         >
           <Image
-            src="/pic.jpg"
-            width={130}
-            height={130}
+            src="/pixel01-white.png"
+            // src="/pixel02.png"
+            width={150}
+            height={150}
             alt="Utsav Gupta"
             className="object-cover object-top w-full h-full"
             priority
