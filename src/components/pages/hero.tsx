@@ -189,7 +189,7 @@ const HeroSection = () => {
       {/* Resume */}
       <motion.div variants={fadeInBlur} className="mt-5 text-sm">
         <Link
-          href="https://drive.google.com/file/d/1okIW-fkH0-ZF-hYfcB8mYDWvOiHEaVco/view?usp=sharing"
+          href="https://drive.google.com/file/d/1OABcOufYAOlPGb0HZNeNXM4tSUhaATyx/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
           className="text-foreground underline decoration-dotted underline-offset-4 hover:text-primary transition-colors"
