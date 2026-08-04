@@ -44,7 +44,7 @@ export default function ProjectPage() {
                   </span>
                 </div>
 
-                <p className="text-muted-foreground text-md leading-tight tracking-tight mt-1">
+                <p className="text-muted-foreground text-sm leading-tight tracking-tight mt-1">
                   {project.description}
                 </p>
 
