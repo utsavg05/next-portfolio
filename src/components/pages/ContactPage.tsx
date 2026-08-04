@@ -40,7 +40,7 @@ export default function ContactPage() {
                             className="inline-flex items-center gap-3 px-5 py-2 rounded-full text-foreground transition"
                         >
                         <div className="flex items-center gap-2">
-                            <span className="font-serif text-background dark:text-foreground tracking-wide">Connect on </span>
+                            <span className="font-geist-sans text-background dark:text-foreground tracking-wide">Connect on </span>
                             <Image width={20} height={20} src={'/image.png'} alt={"x logo"} />
                         </div>
                         </a>
