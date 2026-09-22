@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
-import { GraduationCap, Building2, Calendar, Briefcase } from "lucide-react";
+import React, { useState } from "react";
+import { GraduationCap, Building2, Calendar, Briefcase, ChevronDown } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 
 export default function ExperiencePage() {
+  const [expandedExperience, setExpandedExperience] = useState<number | null>(null);
   const timeline = [
     // {
     //   type: "education",
@@ -15,8 +16,15 @@ export default function ExperiencePage() {
     // },
     {
       type: "experience",
+      title: "Software Developer Intern",
+      place: "WLDD Pvt. Ltd. · Bengaluru, India",
+      duration: "August 2026 – Present",
+      icon: <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
+    },
+    {
+      type: "experience",
       title: "Software Development Intern",
-      place: "FoundersCart Pvt. Ltd.",
+      place: "FoundersCart Pvt. Ltd. · Delhi, India",
       duration: "June – August 2025",
       icon: <Briefcase className="w-5 h-5 sm:w-6 sm:h-6 text-primary" />,
       details: [
@@ -136,39 +144,59 @@ export default function ExperiencePage() {
                 group
               "
             >
-              <h3 className="text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
-                {item.title}
-              </h3>
+              <button
+                type="button"
+                aria-expanded={Boolean(item.details?.length && expandedExperience === idx)}
+                aria-controls={item.details?.length ? `experience-details-${idx}` : undefined}
+                disabled={!item.details?.length}
+                onClick={() => item.details?.length && setExpandedExperience(expandedExperience === idx ? null : idx)}
+                className="flex w-full items-start justify-between gap-3 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-sm disabled:cursor-default"
+              >
+                <span>
+                  <span className="block text-lg sm:text-xl font-semibold text-foreground group-hover:text-primary transition-colors duration-300">
+                    {item.title}
+                  </span>
+                  <span className="mt-2 flex flex-col gap-1">
+                    <span className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
+                      <Building2 className="w-4 h-4 text-primary/70" aria-hidden="true" />
+                      {item.place}
+                    </span>
+                    <span className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
+                      <Calendar className="w-4 h-4 text-primary/70" aria-hidden="true" />
+                      {item.duration}
+                    </span>
+                  </span>
+                </span>
+                {item.details?.length ? (
+                  <ChevronDown
+                    aria-hidden="true"
+                    className={`mt-1 h-5 w-5 shrink-0 text-muted-foreground transition-transform duration-200 ${expandedExperience === idx ? "rotate-180" : ""}`}
+                  />
+                ) : null}
+              </button>
 
-              <div className="flex flex-col gap-1 mt-2">
-                <p className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
-                  <Building2 className="w-4 h-4 text-primary/70" />
-                  {item.place}
-                </p>
-
-                <p className="text-xs sm:text-sm text-muted-foreground flex items-center gap-2">
-                  <Calendar className="w-4 h-4 text-primary/70" />
-                  {item.duration}
-                </p>
-              </div>
-
-              {item.details && (
-                <motion.ul 
-                  variants={listVariants}
-                  className="list-none mt-4 space-y-2 text-xs sm:text-sm text-muted-foreground"
+              {item.details?.length ? (
+                <motion.div
+                  id={`experience-details-${idx}`}
+                  initial={false}
+                  animate={{ height: expandedExperience === idx ? "auto" : 0, opacity: expandedExperience === idx ? 1 : 0 }}
+                  transition={{ duration: 0.25, ease: "easeInOut" }}
+                  className="overflow-hidden"
+                  aria-hidden={expandedExperience !== idx}
                 >
-                  {item.details.map((point, i) => (
-                    <motion.li 
-                      key={i} 
-                      variants={bulletVariants}
-                      className="flex gap-3"
-                    >
-                      <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0" />
-                      {point}
-                    </motion.li>
-                  ))}
-                </motion.ul>
-              )}
+                  <motion.ul
+                    variants={listVariants}
+                    className="list-none mt-4 space-y-2 text-xs sm:text-sm text-muted-foreground"
+                  >
+                    {item.details.map((point, i) => (
+                      <motion.li key={i} variants={bulletVariants} className="flex gap-3">
+                        <span className="mt-1.5 h-1.5 w-1.5 rounded-full bg-primary/60 shrink-0" />
+                        {point}
+                      </motion.li>
+                    ))}
+                  </motion.ul>
+                </motion.div>
+              ) : null}
               
               {/* Subtle accent glow on bottom of card */}
               <div className="absolute inset-x-0 bottom-0 h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
