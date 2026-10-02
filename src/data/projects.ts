@@ -46,7 +46,7 @@ export const projects: Project[] = [
       "A desktop application that helps you stick your important notes and information at your desktop edges.",
     image: "/sticky-edges.webp",
     link: "https://sticky.scribely.site",
-    repoUrl: "",
+    repoUrl: "https://github.com/utsavg05/StickyEdges",
     tech: ["Electron"],
     category: "desktop",
     featured: true,
