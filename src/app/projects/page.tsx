@@ -2,10 +2,10 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ExternalLink, Smartphone, Globe } from "lucide-react";
+import { ExternalLink, Smartphone, Globe, Computer } from "lucide-react";
 import { SiGithub } from "react-icons/si";
 import { motion, Variants } from "motion/react";
-import { webProjects, mobileProjects, type Project } from "@/data/projects";
+import { webProjects, mobileProjects, desktopProjects, type Project } from "@/data/projects";
 
 const containerVariants: Variants = {
   hidden: { opacity: 0 },
@@ -113,6 +113,28 @@ export default function ProjectsPage() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 w-full">
           {webProjects.map((project, index) => (
+            <motion.div key={index} variants={cardVariants}>
+              <ProjectCard project={project} />
+            </motion.div>
+          ))}
+        </div>
+      </motion.section>
+
+      {/* Desktop Projects */}
+      <motion.section
+        id="desktop-apps"
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="mb-16 scroll-mt-20"
+      >
+        <div className="flex items-center gap-2 mb-6">
+          <Computer className="h-5 w-5 text-primary" />
+          <h2 className="text-2xl font-geist-sans text-primary">Desktop Apps</h2>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 sm:gap-10 w-full">
+          {desktopProjects.map((project, index) => (
             <motion.div key={index} variants={cardVariants}>
               <ProjectCard project={project} />
             </motion.div>
