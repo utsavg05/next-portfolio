@@ -5,13 +5,13 @@ export type Project = {
   link: string;
   repoUrl?: string;
   tech: string[];
-  category: "web" | "mobile";
+  category: "web" | "mobile" | "desktop";
   featured: boolean;
 };
 
 export const projects: Project[] = [
   {
-    title: "Scribely (1000+ users)",
+    title: "Scribely (1,500+ users)",
     description:
       "All-in-one AI study toolkit for students and learners. It turns your YouTube lectures, long PDFs, or any study content into handwritten notes, flashcards, quizzes, cheat sheets and more in seconds.",
     image: "/scribely-2k.png",
@@ -26,7 +26,7 @@ export const projects: Project[] = [
     image: "/codemon-2.png",
     link: "https://www.codemon.pro",
     tech: ["Electron", "Claude"],
-    category: "web",
+    category: "desktop",
     featured: true,
   },
   {
@@ -41,6 +41,17 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    title: "Sticky Edges",
+    description:
+      "A desktop application that helps you stick your important notes and information at your desktop edges.",
+    image: "/sticky-edges.webp",
+    link: "https://sticky.scribely.site",
+    repoUrl: "",
+    tech: ["Electron"],
+    category: "desktop",
+    featured: true,
+  },
+  {
     title: "QuickPoll",
     description:
       "Create and share polls instantly. No sign-up required. See results in real-time.",
@@ -48,7 +59,7 @@ export const projects: Project[] = [
     link: "https://quickpoll.utsavworks.in/",
     tech: ["Next.Js", "Typescript", "Supabase"],
     category: "web",
-    featured: true,
+    featured: false,
   },
   {
     title: "Zync",
@@ -103,3 +114,4 @@ export const projects: Project[] = [
 export const featuredProjects = projects.filter((p) => p.featured);
 export const webProjects = projects.filter((p) => p.category === "web");
 export const mobileProjects = projects.filter((p) => p.category === "mobile");
+export const desktopProjects = projects.filter((p) => p.category === "desktop");
