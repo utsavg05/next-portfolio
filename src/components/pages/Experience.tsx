@@ -8,6 +8,7 @@ const experiences = [
   {
     company: "WLDD",
     role: "Software Development Engineer Intern",
+    mobileRole: "SDE Intern",
     duration: "August 2026 – Present",
     mobileDuration: "Aug 26 – Present",
     location: "Bengaluru, India",
@@ -22,6 +23,7 @@ const experiences = [
   {
     company: "FoundersCart",
     role: "Software Developer Intern",
+    mobileRole: "Software Developer Intern",
     duration: "June – August 2025",
     mobileDuration: "Jun 25 – Aug 25",
     location: "Delhi, India",
@@ -92,8 +94,8 @@ export default function ExperiencePage() {
                       {item.company}
                     </h3>
                     {item.current && (
-                      <span className="inline-flex items-center gap-1 rounded-md bg-emerald-500/10 px-2 py-1 text-[10px] font-medium leading-none text-emerald-400 sm:text-xs">
-                        <span className="h-2 w-2 rounded-full bg-emerald-500" />
+                      <span className="inline-flex items-center gap-1 rounded-sm bg-emerald-500/10 px-2 py-1 text-[10px] font-medium leading-none text-white sm:text-xs">
+                        <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                         Working
                       </span>
                     )}
@@ -112,7 +114,8 @@ export default function ExperiencePage() {
                     </button>
                   </div>
                   <p className="mt-1 text-xs leading-snug text-muted-foreground sm:text-base">
-                    {item.role}
+                    <span className="sm:hidden">{item.mobileRole}</span>
+                    <span className="hidden sm:inline">{item.role}</span>
                   </p>
                 </div>
 
