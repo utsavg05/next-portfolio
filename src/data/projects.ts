@@ -11,11 +11,11 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Scribely (1,500+ users)",
+    title: "Scribely (1,700+ users)",
     description:
       "All-in-one AI study toolkit for students and learners. It turns your YouTube lectures, long PDFs, or any study content into handwritten notes, flashcards, quizzes, cheat sheets and more in seconds.",
     image: "/scribely-2k.png",
-    link: "https://scribely.site",
+    link: "https://www.scribely.site",
     tech: ["Next.Js", "Typescript", "NeonDB", "Prisma", "GenAI"],
     category: "web",
     featured: true,
