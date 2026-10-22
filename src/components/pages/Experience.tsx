@@ -15,8 +15,8 @@ const experiences = [
     mobileLocation: "Bengaluru, IN",
     current: true,
     details: [
-      "Contributing to the development and maintenance of Meme’d and Solo, production platforms for creator campaigns and internal operations, working across React/Next.js, Express.js, and MongoDB.",
-      "Built and improved backend workflows and REST APIs for creator campaign operations, including social account validation, post submission and retry flows, activity timelines, and finance/admin workflows.",
+      "Contributing to the development of Meme’d and Solo, WLDD’s in-house platforms for creator campaign management, finance, and operations, building production-ready features using React, Next.js, Express.js, and MongoDB.",
+      "Developed and enhanced REST APIs and backend workflows across both platforms, improving creator onboarding, social account validation, post submission workflows, campaign activity tracking, and internal finance operations.",
       "Implemented a responsive website revamp from Figma designs, developing reusable UI components and complex responsive layouts across desktop, tablet, and mobile for the Meme’d creator and brand experience.",
     ],
   },
