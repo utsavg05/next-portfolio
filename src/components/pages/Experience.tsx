@@ -24,7 +24,7 @@ const experiences = [
     company: "FoundersCart",
     role: "Software Developer Intern",
     mobileRole: "Software Developer Intern",
-    duration: "June – August 2025",
+    duration: "June 2025 – August 2025",
     mobileDuration: "Jun 25 – Aug 25",
     location: "Delhi, India",
     mobileLocation: "Delhi, IN",
@@ -94,7 +94,7 @@ export default function ExperiencePage() {
                       {item.company}
                     </h3>
                     {item.current && (
-                      <span className="inline-flex items-center gap-1 rounded-sm bg-emerald-500/10 px-2 py-1 text-[10px] font-medium leading-none text-white sm:text-xs">
+                      <span className="inline-flex items-center gap-1 rounded-sm bg-emerald-500/10 px-2 py-1 text-[10px] font-medium leading-none text-black dark:text-white sm:text-xs">
                         <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
                         Working
                       </span>
